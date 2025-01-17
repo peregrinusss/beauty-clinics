@@ -1,0 +1,310 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner flex">
+      <div class="flex header__left">
+        <img class="header__logo" src="img/logo/logo.svg" alt="Логотип" />
+        <nav class="header__nav">
+          <ul class="flex">
+            <li data-menu-open="menu-about">
+              <a href="#">О клинике <span>(6)</span></a>
+            </li>
+            <li data-menu-open="menu-services">
+              <a href="#">Услуги <span>(18)</span></a>
+            </li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Решение проблем</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__links flex gap-10">
+        <button
+          class="btn main-btn header__subscribe active mod-open-btn"
+          data-modal="subscribe"
+        >
+          Записаться
+        </button>
+        <div class="flex gap-10 header__links-mobile">
+          <button class="btn gray-btn mod-open-btn" data-modal="search">
+            <svg
+              width="18"
+              height="19"
+              viewBox="0 0 18 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.625 16.3775C12.56 16.3775 15.75 13.1875 15.75 9.2525C15.75 5.31747 12.56 2.1275 8.625 2.1275C4.68997 2.1275 1.5 5.31747 1.5 9.2525C1.5 13.1875 4.68997 16.3775 8.625 16.3775Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16.5 17.1275L14.5 15.1275"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <a href="tel:+74959897777" class="btn gray-btn btn-icon-desktop">
+            <span>+7 (495) 989-77-77</span>
+          </a>
+          <button
+            class="btn gray-btn btn-icon-mobile tooltip-btn mod-open-btn"
+            data-tooltip-target="phone"
+            data-modal="phone"
+          >
+            <svg
+              width="20"
+              height="21"
+              viewBox="0 0 20 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3077 15.9025C18.3077 16.2025 18.241 16.5109 18.0993 16.8109C17.9577 17.1109 17.7744 17.3942 17.5327 17.6609C17.1244 18.1109 16.6743 18.4359 16.166 18.6442C15.666 18.8525 15.1244 18.9609 14.541 18.9609C13.691 18.9609 12.7827 18.7609 11.8243 18.3525C10.866 17.9442 9.90768 17.3942 8.95768 16.7025C7.99935 16.0025 7.09102 15.2275 6.22435 14.3692C5.36602 13.5025 4.59102 12.5942 3.89935 11.6442C3.21602 10.6942 2.66602 9.74419 2.26602 8.80252C1.86602 7.85252 1.66602 6.94419 1.66602 6.07752C1.66602 5.51086 1.76602 4.96919 1.96602 4.46919C2.16602 3.96086 2.48268 3.49419 2.92435 3.07752C3.45768 2.55252 4.04102 2.29419 4.65768 2.29419C4.89102 2.29419 5.12435 2.34419 5.33268 2.44419C5.54935 2.54419 5.74102 2.69419 5.89102 2.91086L7.82435 5.63586C7.97435 5.84419 8.08268 6.03586 8.15768 6.21919C8.23268 6.39419 8.27435 6.56919 8.27435 6.72752C8.27435 6.92752 8.21602 7.12752 8.09935 7.31919C7.99102 7.51086 7.83268 7.71086 7.63268 7.91086L6.99935 8.56919C6.90768 8.66086 6.86602 8.76919 6.86602 8.90252C6.86602 8.96919 6.87435 9.02752 6.89102 9.09419C6.91602 9.16086 6.94102 9.21086 6.95768 9.26086C7.10768 9.53586 7.36602 9.89419 7.73268 10.3275C8.10768 10.7609 8.50768 11.2025 8.94102 11.6442C9.39102 12.0859 9.82435 12.4942 10.266 12.8692C10.6993 13.2359 11.0577 13.4859 11.341 13.6359C11.3827 13.6525 11.4327 13.6775 11.491 13.7025C11.5577 13.7275 11.6243 13.7359 11.6993 13.7359C11.841 13.7359 11.9493 13.6859 12.041 13.5942L12.6743 12.9692C12.8827 12.7609 13.0827 12.6025 13.2743 12.5025C13.466 12.3859 13.6577 12.3275 13.866 12.3275C14.0243 12.3275 14.191 12.3609 14.3743 12.4359C14.5577 12.5109 14.7494 12.6192 14.9577 12.7609L17.716 14.7192C17.9327 14.8692 18.0827 15.0442 18.1743 15.2525C18.2577 15.4609 18.3077 15.6692 18.3077 15.9025Z"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="mobile">
+          <button class="btn gray-btn burger" id="burger">
+            <svg class="ham hamRotate" viewBox="0 0 100 100">
+              <path
+                class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+              />
+              <path class="line middle" d="m 30,50 h 40" />
+              <path
+                class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__menu" data-menu="menu-services">
+    <div class="container">
+      <ul class="header__list">
+        <li>
+          <a href="#">Консультативный прием</a>
+        </li>
+        <li>
+          <a href="#">Препараты на основе коллагена</a>
+        </li>
+        <li>
+          <a href="#">Анестезия</a>
+        </li>
+        <li>
+          <a href="#">Биоревитализация, мезотерапия</a>
+        </li>
+        <li>
+          <a href="#">Контурная пластика</a>
+        </li>
+        <li>
+          <a href="#">Ботулинотерапия</a>
+        </li>
+        <li>
+          <a href="#">Армирование кожи лица и шеи линейными мезонитями</a>
+        </li>
+        <li>
+          <a href="#">Армирование кожи тела линейными мезонитями</a>
+        </li>
+        <li>
+          <a href="#">Тредлифтинг спиральными мезонитями</a>
+        </li>
+        <li>
+          <a href="#">Тредлифтинг мезонитями с насечками</a>
+        </li>
+        <li>
+          <a href="#">Тредлифтинг мезонитями на канюлях</a>
+        </li>
+        <li>
+          <a href="#">Плазмотерапия</a>
+        </li>
+        <li>
+          <a href="#"
+            >Карбокситерапия с применением аппарата для карбокситерапии CARBOXY
+            PEN</a
+          >
+        </li>
+        <li>
+          <a href="#">Лечение гипергидроза (потливости) ботулотоксином</a>
+        </li>
+        <li>
+          <a href="#">Пилинги</a>
+        </li>
+        <li>
+          <a href="#"
+            >Удаление доброкачественных новообразований методом
+            электрокоагуляции на аппарате Электрокоагулятор КРИСТИ «Галатея»</a
+          >
+        </li>
+        <li>
+          <a href="#">Липолитики</a>
+        </li>
+        <li>
+          <a href="#">Коррекция осложнений</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__menu" data-menu="menu-about">
+    <div class="container">
+      <ul class="header__list header__list-about">
+        <li>
+          <a href="#">Специалисты</a>
+        </li>
+        <li>
+          <a href="#">Отзывы пациентов</a>
+        </li>
+        <li>
+          <a href="#">Вакансии</a>
+        </li>
+        <li>
+          <a href="#">Реквизиты</a>
+        </li>
+        <li>
+          <a href="#">Лицензии</a>
+        </li>
+        <li>
+          <a href="#">Франшиза</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="container">
+      <div class="mobile-menu__inner">
+        <nav class="mobile-menu__nav">
+          <ul class="">
+            <div class="accordion-container">
+              <div class="ac mobile-menu__item">
+                <li class="ac-header ac-trigger">О клинике <span>(6)</span></li>
+                <div class="ac-panel">
+                  <ul class="header__list">
+                    <li>
+                      <a href="#">Консультативный прием</a>
+                    </li>
+                    <li>
+                      <a href="#">Препараты на основе коллагена</a>
+                    </li>
+                    <li>
+                      <a href="#">Анестезия</a>
+                    </li>
+                    <li>
+                      <a href="#">Биоревитализация, мезотерапия</a>
+                    </li>
+                    <li>
+                      <a href="#">Контурная пластика</a>
+                    </li>
+                    <li>
+                      <a href="#">Ботулинотерапия</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Армирование кожи лица и шеи линейными мезонитями</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">Армирование кожи тела линейными мезонитями</a>
+                    </li>
+                    <li>
+                      <a href="#">Тредлифтинг спиральными мезонитями</a>
+                    </li>
+                    <li>
+                      <a href="#">Тредлифтинг мезонитями с насечками</a>
+                    </li>
+                    <li>
+                      <a href="#">Тредлифтинг мезонитями на канюлях</a>
+                    </li>
+                    <li>
+                      <a href="#">Плазмотерапия</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Карбокситерапия с применением аппарата для
+                        карбокситерапии CARBOXY PEN</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Лечение гипергидроза (потливости) ботулотоксином</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">Пилинги</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Удаление доброкачественных новообразований методом
+                        электрокоагуляции на аппарате Электрокоагулятор КРИСТИ
+                        «Галатея»</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">Липолитики</a>
+                    </li>
+                    <li>
+                      <a href="#">Коррекция осложнений</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="ac mobile-menu__item">
+                <li class="ac-header ac-trigger">Услуги <span>(18)</span></li>
+                <div class="ac-panel">
+                  <ul class="header__list header__list-about">
+                    <li>
+                      <a href="#">Специалисты</a>
+                    </li>
+                    <li>
+                      <a href="#">Отзывы пациентов</a>
+                    </li>
+                    <li>
+                      <a href="#">Вакансии</a>
+                    </li>
+                    <li>
+                      <a href="#">Реквизиты</a>
+                    </li>
+                    <li>
+                      <a href="#">Лицензии</a>
+                    </li>
+                    <li>
+                      <a href="#">Франшиза</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <li class="mobile-menu__item"><a href="#">Цены</a></li>
+            <li class="mobile-menu__item"><a href="#">Новости</a></li>
+            <li class="mobile-menu__item"><a href="#">Акции</a></li>
+            <li class="mobile-menu__item"><a href="#">Контакты</a></li>
+            <li class="mobile-menu__item"><a href="#">Решение проблем</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__btn mod-open-btn" data-modal="subscribe">
+          <button class="btn main-btn">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="tooltip phone-tooltip" data-tooltip="phone">
+    <div class="tooltip__body">
+      <span>+7 (495) 989-77-77</span>
+      <a href="tel:+74959897777" class="btn main-btn"> Позвонить </a>
+    </div>
+  </div> -->
+</header>
