@@ -132,9 +132,10 @@ h6,
 }
 .container {
   width: 100%;
-  max-width: 1460px;
+  max-width: 1560px;
   padding: 0 20px;
   margin: 0 auto;
+  position: relative;
   @media (max-width: $bp1) {
     max-width: 1260px;
   }
@@ -151,6 +152,12 @@ h6,
   }
   @media (max-width: $bp5) {
     max-width: 480px;
+  }
+
+  & .btn-back {
+    position: absolute;
+    left: 20px;
+    top: 0;
   }
 }
 .fixed-block {
@@ -746,6 +753,7 @@ h6,
   padding: 14px 20px;
   height: 50px;
   white-space: nowrap;
+  text-align: center;
 
   @media (max-width: $bp1) {
     font-size: 16px;
@@ -790,6 +798,48 @@ h6,
     &:hover {
       background-color: $black;
       color: $white;
+
+      & .line {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.white-btn {
+  background-color: $white;
+  color: $black;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & span {
+    color: $black !important;
+  }
+
+  &.active {
+    background-color: $black;
+    color: $white;
+
+    & .line {
+      stroke: $white;
+    }
+  }
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: $bp4) {
+    &:hover {
+      background-color: transparent;
+      color: $white;
+
+      & span {
+        color: $white !important;
+      }
 
       & .line {
         stroke: $white;
@@ -958,8 +1008,15 @@ h3 {
   font-weight: 500;
   line-height: 28px;
   color: $black;
+  margin-bottom: 20px;
 
   @media (max-width: $bp1) {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $bp3) {
     font-size: 18px;
     line-height: 22px;
   }
@@ -985,6 +1042,407 @@ h3 {
   }
 
   &:hover {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
+  }
+}
+
+.btn-round {
+  width: 204px;
+  height: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+
+  @media (max-width: $bp1) {
+    width: 160px;
+    height: 160px;
+  }
+
+  &:hover {
+    background: $white;
+
+    & span {
+      color: $black;
+    }
+  }
+
+  & svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+
+    @media (max-width: $bp1) {
+      font-size: 16px;
+    }
+  }
+}
+
+section {
+  margin-bottom: 140px;
+
+  @media (max-width: $bp2) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: $bp4) {
+    margin-bottom: 70px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: $black;
+
+  @media (max-width: $bp1) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $bp4) {
+    font-size: 20px;
+  }
+}
+
+.bg-gray {
+  background-color: $light-gray;
+  padding: 40px 0;
+  border-radius: 52px;
+
+  margin-bottom: 100px;
+
+  @media (max-width: $bp3) {
+    padding: 30px 0;
+    border-radius: 0;
+    border-bottom-right-radius: 42px;
+    border-bottom-left-radius: 42px;
+  }
+
+  @media (max-width: $bp4) {
+    margin-bottom: 60px;
+  }
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 15px 0px #f5f5f5;
+  padding: 4px;
+  background: $white;
+
+  @media (max-width: $bp4) {
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+  }
+
+  @media (min-width: $bp4) {
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.swiper {
+  @media (max-width: $bp4) {
+    overflow: visible;
+  }
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $black;
+
+  @media (max-width: $bp1) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.main-top {
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp4) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -10px;
+    padding: 0 10px;
+    gap: 5px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* mozilla */
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome browsers */
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    color: $dark-gray;
+    padding: 15px 20px;
+    border-radius: 100px;
+    border: 1px solid $dark-gray;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    white-space: nowrap;
+
+    @media (max-width: $bp4) {
+      padding: 12px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    & span {
+      position: relative;
+      top: -5px;
+      left: -3px;
+      font-size: 10px;
+      font-style: italic;
+    }
+
+    & svg {
+      fill: $blue;
+      width: 20px;
+      height: 20px;
+    }
+
+    &.active {
+      color: $white;
+      background: $maincolor;
+      pointer-events: none;
+      border-color: $maincolor;
+
+      & svg {
+        fill: $white;
+      }
+    }
+  }
+  @media (max-width: $bp2) {
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.text-block {
+
+  & p {
+    margin-bottom: 10px;
+  }
+
+  & h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  & ol {
+    padding-left: 40px;
+    margin: 20px 0;
+
+    & li {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $black;
+      position: relative;
+
+      @media (max-width: $bp1) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $text-gradient;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+      }
+    }
+  }
+}
+
+.container-small {
+  max-width: 1006px;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: content-box;
+}
+
+.btn-back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+
+  @media (min-width: $bp4) {
+    &:hover {
+
+      & .btn-back__icon {
+        background-color: $black;
+
+        & svg {
+          color: $white;
+        }
+      }
+
+      & span {
+        color: $black;
+      }
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px 0px #f5f5f5;
+    padding: 4px;
+    background: $white;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      color: $black;
+    }
+  
+    @media (max-width: $bp4) {
+      width: 40px;
+      height: 40px;
+      padding: 11px;
+    }
+  }
+
+  & span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #00000066;
+    transition: all 0.3s;
+  }
+}
+
+.simple-slider {
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 14%);
+    z-index: 10;
+  }
+
+  & .nav-btn {
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  & .swiper-button-disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.memoji {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 203px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 180px;
+
+  &__text {
+    border-radius: 100px;
+    background: $light-gray;
+    padding: 36px 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+
+    & h2 {
+      text-align: center;
+    }
+
+    & .btn {
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  &__right {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: $light-gray;
+    margin-left: -8%;
+  }
+
+  &__icon {
+    width: 206px;
+    height: 221px;
+    position: absolute;
+    right: -20%;
+    top: -20%;
   }
 }

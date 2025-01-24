@@ -1,0 +1,34 @@
+.news-page {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: $bp3) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $bp4) {
+      column-gap: 10px;
+      row-gap: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__inner {
+    margin-top: 140px;
+
+    @media (max-width: $bp1) {
+      margin-top: 100px;
+    }
+
+    @media (max-width: $bp3) {
+      margin-top: 80px;
+    }
+
+    & .services-card {
+      display: block;
+      aspect-ratio: 2/1;
+    }
+  }
+}

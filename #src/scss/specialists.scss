@@ -1,0 +1,15 @@
+.specialists {
+
+  &__more {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  & .experts-card {
+    background: $light-gray;
+
+    &__img {
+      background: $light-gray;
+    }
+  }
+}

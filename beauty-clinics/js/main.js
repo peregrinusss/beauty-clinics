@@ -208,10 +208,147 @@ modalCloseBtn.forEach(btn => {
   })
 })
 
-//mask input
+// mask input
 const inp = document.querySelectorAll('input[type=tel]')
 if (inp) {
     inp.forEach(item => {
         Inputmask({ "mask": "+7 999 999-99-99" }).mask(item);
     })
+}
+
+const circleText = document.getElementById('circle-text');
+if (circleText) {
+  new CircleType(circleText);
+}
+
+// basic slider
+const basicSliderBlock = document.querySelector('.basic-slider')
+if (basicSliderBlock) {
+  let basicSlider = new Swiper(basicSliderBlock.querySelector(".swiper"), {
+    slidesPerView: 1.15,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: basicSliderBlock.querySelector(".nav-btn--prev"),
+      nextEl: basicSliderBlock.querySelector(".nav-btn--next"),
+    },
+    breakpoints: {
+      991.98: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      767.98: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+    speed: 800
+  }) 
+}
+
+// reasons slider
+const reasonsSliderBlock = document.querySelector('.reasons-slider')
+if (reasonsSliderBlock) {
+  let basicSlider = new Swiper(reasonsSliderBlock.querySelector(".swiper"), {
+    slidesPerView: 1.1,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 30,
+      slideShadows: false,
+      depth: 300,
+      scale: 0.9,
+    },
+    spaceBetween: 0,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: reasonsSliderBlock.querySelector(".nav-btn--prev"),
+      nextEl: reasonsSliderBlock.querySelector(".nav-btn--next"),
+    },
+    breakpoints: {
+      575.98: {
+        slidesPerView: 1
+      }
+    },
+    speed: 800
+  }) 
+}
+
+// basic slider
+const simpleSliderBlock = document.querySelector('.simple-slider')
+if (simpleSliderBlock) {
+  let basicSlider = new Swiper(simpleSliderBlock.querySelector(".swiper"), {
+    slidesPerView: 1.3,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: simpleSliderBlock.querySelector(".nav-btn--prev"),
+      nextEl: simpleSliderBlock.querySelector(".nav-btn--next"),
+    },
+    breakpoints: {
+      991.98: {
+        // slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      767.98: {
+        // slidesPerView: 2,
+        // spaceBetween: 20,
+      },
+      // 575.98: {
+      //   slidesPerView: 1
+      // }
+    },
+    speed: 800
+  }) 
+}
+
+//swhitch tab
+function tabSwitch(nav,block) {
+  nav.forEach((item,idx) => {
+    item.addEventListener("click", () => {
+      nav.forEach(el => {
+        el.classList.remove("active")
+      })
+      block.forEach(el => {
+        el.classList.remove("active")
+      })
+      item.classList.add("active")
+      block[idx].classList.add("active")
+      item.style.opacity = "0"
+        block[idx].style.opacity = "0"
+      setTimeout(() => {
+        item.style.opacity = "1"
+        block[idx].style.opacity = "1"
+      }, 0);
+    })
+  });
+}
+
+//switch active tab/block
+const switchBlock = document.querySelectorAll(".switch-block")
+if (switchBlock) {
+  switchBlock.forEach(item => {
+    tabSwitch(item.querySelectorAll("[data-nav]"),item.querySelectorAll("[data-block]"))
+  })
+}
+
+// tabs scroll btn
+const tabsScroll = document.querySelectorAll(".tabs-scroll")
+function viewScroll() {
+  tabsScroll.forEach((item => {
+    item.querySelector(".tabs").scrollWidth - item.querySelector(".tabs").clientWidth - item.querySelector(".tabs").scrollLeft > 5 ? item.classList.add("show-btn") : item.classList.remove("show-btn")
+    item.querySelector(".tabs").addEventListener("scroll", () => {
+      item.querySelector(".tabs").scrollWidth - item.querySelector(".tabs").clientWidth - item.querySelector(".tabs").scrollLeft > 5 ? item.classList.add("show-btn") : item.classList.remove("show-btn")
+    })
+  }
+  ));
+}
+if (tabsScroll) {
+  viewScroll(),
+  window.addEventListener("resize", viewScroll)
 }

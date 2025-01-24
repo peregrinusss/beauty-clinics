@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +14,15 @@
     <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/simplebar.min.css" type="text/css" rel="stylesheet"> 
     <link href="css/accordion.min.css" type="text/css" rel="stylesheet"> 
+    <link href="css/swiper.min.css" type="text/css" rel="stylesheet"> 
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
     <title>Beauty clinics</title>
 </head>
 
-<body data-simplebar>
+  <body data-simplebar>
     <div class="wrap">
-        <!--header-->
-        <header class="header">
+      <!--header-->
+      <header class="header">
   <div class="container">
     <div class="header__inner flex">
       <div class="flex header__left">
@@ -333,12 +333,855 @@
   </div> -->
 </header>
 
-        <!--main-->
-        <main class="main">
-            <div class="container">Медицинская косметология экспертного уровня</div>
-        </main>
-         <!--footer-->
-        <footer class="footer">
+      <!--main-->
+      <main class="main">
+        <section class="intro">
+          <div class="container">
+            <div class="intro__inner">
+              <div class="intro__header">
+                <a href="#" class="intro-link">
+                  <div class="intro-link__icon">
+                    <svg
+                      width="12"
+                      height="14"
+                      viewBox="0 0 12 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.7905 5.27784C12.1239 6.04764 12.1239 7.97214 10.7905 8.74194L3.29052 13.0721C1.95719 13.8419 0.290527 12.8796 0.290527 11.34L0.290527 2.67976C0.290527 1.14016 1.95719 0.177909 3.29053 0.94771L10.7905 5.27784Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <span id="circle-text">
+                      подписывайтесьㅤиㅤставьтеㅤлайкиㅤиㅤ</span
+                    >
+                  </div>
+                  <span class="intro-link__text"
+                    >Рассказываем о клинике на YouTube</span
+                  >
+                </a>
+                <div class="intro-reviews">
+                  <div class="intro-reviews__imgs">
+                    <div class="intro-reviews__img">
+                      <picture><source srcset="img/review-1.webp" type="image/webp"><img src="img/review-1.jpg" alt="" /></picture>
+                    </div>
+                    <div class="intro-reviews__img">
+                      <picture><source srcset="img/review-2.webp" type="image/webp"><img src="img/review-2.jpg" alt="" /></picture>
+                    </div>
+                    <div class="intro-reviews__img">
+                      <picture><source srcset="img/review-3.webp" type="image/webp"><img src="img/review-3.jpg" alt="" /></picture>
+                    </div>
+                  </div>
+                  <span>126 отзывов</span>
+                  <a href="#" class="intro-reviews__plus">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 9 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="4.03613"
+                        y="0.333313"
+                        width="0.925926"
+                        height="8.33333"
+                        rx="0.462963"
+                        fill="white"
+                      />
+                      <rect
+                        x="8.66602"
+                        y="4.03705"
+                        width="0.925926"
+                        height="8.33333"
+                        rx="0.462963"
+                        transform="rotate(90 8.66602 4.03705)"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="intro__body">
+                <div class="inro__left">
+                  <div class="intro__text gap-20">
+                    <h1>
+                      Медицинская косметология <br />
+                      экспертного уровня
+                    </h1>
+                    <span
+                      >Многопрофильный центр со специалистами-основоположниками
+                      <br />
+                      нитевой имплантологии и anti-age терапии</span
+                    >
+                    <button class="btn white-btn">
+                      <span>Выбрать услуги</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.25857 14.1833L3.70857 11.2833C4.10857 10.475 4.10857 9.53332 3.70857 8.72499L2.25857 5.81666C1.0169 3.33332 3.6919 0.708322 6.15023 2.00832L7.43357 2.69165C7.6169 2.78332 7.75857 2.93332 7.83357 3.11665L12.5752 13.6583C12.7669 14.0917 12.5919 14.6 12.1752 14.8167L6.1419 17.9917C3.6919 19.2917 1.0169 16.6667 2.25857 14.1833Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M13.5915 13L10.4832 6.1C10.1332 5.325 10.9665 4.54167 11.7165 4.94167L16.5249 7.475C18.5665 8.55 18.5665 11.4667 16.5249 12.5417L14.8249 13.4333C14.3665 13.6667 13.8082 13.475 13.5915 13Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="intro__impact">
+                    <a href="#" class="intro-card">
+                      <p>
+                        Новогодние акции <br />
+                        <span>от клиники</span>
+                      </p>
+                      <div class="intro-card__body">
+                        <div class="intro-card__blur">
+                          <picture><source srcset="img/blur.webp" type="image/webp"><img src="img/blur.png" alt="" /></picture>
+                        </div>
+                        <div class="intro-card__img">
+                          <picture><source srcset="img/impact-1.webp" type="image/webp"><img src="img/impact-1.png" alt="" /></picture>
+                        </div>
+                        <svg
+                          class="intro-card__icon"
+                          width="43"
+                          height="43"
+                          viewBox="0 0 43 43"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            y="8.95506"
+                            width="35.203"
+                            height="35.203"
+                            rx="8"
+                            transform="rotate(-14.7371 0 8.95506)"
+                            fill="#FEE8F0"
+                          />
+                          <path
+                            d="M27.632 19.8534L28.8854 24.4339C29.347 26.121 28.3544 27.8614 26.6673 28.3231L20.56 29.9943C18.8729 30.4559 17.1324 29.4633 16.6708 27.7762L15.4174 23.1957C15.3025 22.7758 15.552 22.3383 15.9719 22.2234L17.4758 21.8119C17.8957 21.697 18.3332 21.9465 18.4481 22.3664L19.1041 24.7635C19.2587 25.3284 19.7137 25.7619 20.283 25.8933C20.5379 25.9549 20.7989 25.9491 21.0508 25.8802C21.3409 25.8008 21.608 25.6374 21.814 25.4006L22.4097 24.7288L23.2047 24.9954C23.7561 25.181 24.362 25.0562 24.7851 24.6532C25.2158 24.2481 25.3889 23.651 25.2322 23.0784L24.5783 20.689C24.4634 20.2691 24.713 19.8315 25.1329 19.7167L26.6597 19.2989C27.0796 19.184 27.5171 19.4335 27.632 19.8534Z"
+                            fill="#F41C6B"
+                          />
+                          <path
+                            d="M27.7327 15.723L27.9416 16.4864C28.1714 17.3261 27.9548 18.1239 26.8326 18.431L15.3814 21.5644C14.2133 21.8841 13.6665 21.2952 13.4367 20.4554L13.2279 19.692C12.9981 18.8522 13.1689 18.067 14.3369 17.7474L25.7881 14.6139C26.9103 14.3069 27.5029 14.8832 27.7327 15.723Z"
+                            fill="#F41C6B"
+                          />
+                          <path
+                            d="M19.7876 16.2559L15.5736 17.409C15.2367 17.1975 15.1253 16.7603 15.3249 16.4103L16.1123 15.0296C16.3175 14.6698 16.7832 14.5424 17.1429 14.7476L19.7876 16.2559Z"
+                            fill="#F41C6B"
+                          />
+                          <path
+                            d="M24.5438 14.9544L20.3298 16.1076L21.8381 13.4629C22.0432 13.1031 22.5089 12.9757 22.8687 13.1809L24.2493 13.9683C24.5994 14.1679 24.7261 14.601 24.5438 14.9544Z"
+                            fill="#F41C6B"
+                          />
+                          <path
+                            d="M22.8195 20.3496C23.2393 20.2347 23.6769 20.4842 23.7918 20.9041L24.4456 23.2936C24.6127 23.9043 24.0336 24.4567 23.4357 24.251L22.6233 23.981C22.3254 23.882 21.9971 23.9718 21.7835 24.2108L21.1955 24.8805C20.7835 25.3542 20.0114 25.1716 19.8464 24.5685L19.1884 22.1638C19.0735 21.7439 19.323 21.3064 19.7429 21.1915L22.8195 20.3496Z"
+                            fill="#F41C6B"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                    <a href="#" class="intro-card intro-card-2">
+                      <p>
+                        <span
+                          >Контурная пластика <br />
+                          губ</span
+                        >
+                        со скидкой 15%
+                      </p>
+                      <div class="intro-card__body">
+                        <div class="intro-card__blur">
+                          <picture><source srcset="img/blur.webp" type="image/webp"><img src="img/blur.png" alt="" /></picture>
+                        </div>
+                        <div class="intro-card__img">
+                          <picture><source srcset="img/impact-2.webp" type="image/webp"><img src="img/impact-2.png" alt="" /></picture>
+                        </div>
+                        <svg
+                          class="intro-card__icon"
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            y="17.5"
+                            width="35"
+                            height="35"
+                            rx="8"
+                            transform="rotate(-30 0 17.5)"
+                            fill="#EFFAF3"
+                          />
+                          <path
+                            d="M25.9115 26.6475L25.5894 26.0895C25.3527 25.6796 25.2211 25.2527 25.1944 24.8088C25.1712 24.363 25.266 23.9385 25.4789 23.5355C25.6917 23.1325 26.0357 22.7938 26.511 22.5194C27.0002 22.237 27.4707 22.1054 27.9227 22.1246C28.3726 22.1404 28.7815 22.2717 29.1491 22.5187C29.5202 22.7637 29.825 23.0929 30.0637 23.5062L30.3858 24.0642C30.6225 24.4741 30.7541 24.901 30.7808 25.3449C30.8074 25.7887 30.7143 26.2122 30.5015 26.6152C30.2922 27.0162 29.9464 27.3559 29.4642 27.6343C28.982 27.9127 28.5131 28.0433 28.0577 28.0261C27.6023 28.0089 27.1891 27.8778 26.818 27.6328C26.4503 27.3858 26.1482 27.0574 25.9115 26.6475ZM26.9379 25.3109L27.26 25.8689C27.4171 26.141 27.6268 26.353 27.8889 26.5047C28.151 26.6565 28.4474 26.6369 28.7781 26.446C29.1122 26.2531 29.2766 26.0089 29.2714 25.7135C29.2676 25.4125 29.1861 25.1243 29.027 24.8488L28.7049 24.2908C28.5458 24.0152 28.3403 23.7986 28.0885 23.6408C27.8347 23.4797 27.5356 23.4985 27.1912 23.6974C26.8674 23.8843 26.705 24.1319 26.7039 24.4403C26.7008 24.7452 26.7788 25.0354 26.9379 25.3109ZM17.0371 23.6974L16.7149 23.1394C16.4763 22.7261 16.3453 22.2965 16.3221 21.8507C16.2989 21.4048 16.3947 20.9821 16.6095 20.5825C16.8223 20.1795 17.1664 19.8408 17.6417 19.5664C18.1274 19.286 18.5962 19.1554 19.0482 19.1746C19.5016 19.1883 19.9121 19.3187 20.2798 19.5657C20.6474 19.8127 20.9506 20.1429 21.1892 20.5562L21.5114 21.1142C21.75 21.5275 21.8826 21.9561 21.9093 22.4C21.9374 22.8384 21.844 23.2575 21.6292 23.657C21.4144 24.0566 21.0677 24.3946 20.5889 24.671C20.1032 24.9514 19.6337 25.0847 19.1803 25.0709C18.7303 25.0552 18.3197 24.9248 17.9487 24.6798C17.5776 24.4348 17.2737 24.1073 17.0371 23.6974ZM18.0737 22.3549L18.3959 22.9129C18.555 23.1885 18.7639 23.4031 19.0226 23.5569C19.2827 23.7052 19.5781 23.6839 19.9088 23.493C20.2394 23.3021 20.4021 23.0589 20.3969 22.7634C20.3931 22.4625 20.3116 22.1743 20.1525 21.8987L19.8304 21.3407C19.6713 21.0652 19.4658 20.8485 19.214 20.6908C18.9602 20.5296 18.6628 20.5475 18.3218 20.7444C17.9946 20.9333 17.8322 21.1809 17.8345 21.4872C17.8369 21.7936 17.9166 22.0828 18.0737 22.3549ZM22.2675 31.3967L23.4331 16.6154L24.7247 15.8697L23.5592 30.6509L22.2675 31.3967Z"
+                            fill="#5BCE89"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="intro__img">
+                  <picture><source srcset="img/girl.webp" type="image/webp"><img src="img/girl.png" alt="" /></picture>
+                  <a href="#" class="btn-round">
+                    <span>Посмотреть специалистов</span>
+                    <svg
+                      width="205"
+                      height="205"
+                      viewBox="0 0 205 205"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g filter="url(#filter0_b_133_6376)">
+                        <circle
+                          cx="102.506"
+                          cy="102.851"
+                          r="102"
+                          transform="rotate(74.2548 102.506 102.851)"
+                          fill="white"
+                          fill-opacity="0.1"
+                        />
+                        <circle
+                          cx="102.506"
+                          cy="102.851"
+                          r="101.5"
+                          transform="rotate(74.2548 102.506 102.851)"
+                          stroke="white"
+                          stroke-opacity="0.3"
+                        />
+                      </g>
+                      <g filter="url(#filter1_b_133_6376)">
+                        <path
+                          d="M3.95533 127.964C2.53783 128.363 1.71269 129.836 2.11234 131.254C2.51199 132.671 3.98508 133.496 5.40258 133.097C6.82008 132.697 7.64522 131.224 7.24557 129.807C6.84592 128.389 5.37283 127.564 3.95533 127.964ZM200.543 75.3084C200.618 75.5742 200.894 75.7289 201.16 75.654C201.426 75.579 201.581 75.3028 201.506 75.0371L200.543 75.3084ZM5.16019 130.395C-10.0514 76.441 21.3551 20.3716 75.3086 5.15998L75.0373 4.1975C20.5522 19.559 -11.1638 76.1808 4.19772 130.666L5.16019 130.395ZM75.3086 5.15998C129.262 -10.0516 185.332 21.3549 200.543 75.3084L201.506 75.0371C186.144 20.552 129.522 -11.164 75.0373 4.1975L75.3086 5.15998Z"
+                          fill="url(#paint0_linear_133_6376)"
+                        />
+                      </g>
+                      <defs>
+                        <filter
+                          id="filter0_b_133_6376"
+                          x="-9.52002"
+                          y="-9.17459"
+                          width="224.052"
+                          height="224.052"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feGaussianBlur
+                            in="BackgroundImageFix"
+                            stdDeviation="5"
+                          />
+                          <feComposite
+                            in2="SourceAlpha"
+                            operator="in"
+                            result="effect1_backgroundBlur_133_6376"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_backgroundBlur_133_6376"
+                            result="shape"
+                          />
+                        </filter>
+                        <filter
+                          id="filter1_b_133_6376"
+                          x="-9.67432"
+                          y="-9.67471"
+                          width="221.199"
+                          height="152.872"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feGaussianBlur
+                            in="BackgroundImageFix"
+                            stdDeviation="5"
+                          />
+                          <feComposite
+                            in2="SourceAlpha"
+                            operator="in"
+                            result="effect1_backgroundBlur_133_6376"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_backgroundBlur_133_6376"
+                            result="shape"
+                          />
+                        </filter>
+                        <linearGradient
+                          id="paint0_linear_133_6376"
+                          x1="187.185"
+                          y1="26.0864"
+                          x2="-9.16041"
+                          y2="81.4438"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="white" stop-opacity="0" />
+                          <stop
+                            offset="0.505"
+                            stop-color="white"
+                            stop-opacity="0.8"
+                          />
+                          <stop offset="1" stop-color="white" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="about__inner">
+              <span class="about__text">О клинике</span>
+              <div class="about__body">
+                <h2>
+                  На данный момент <span>наши методики</span>, программы, наш
+                  опыт применяются
+                  <span
+                    >более чем в 20 крупнейших медицинских клиниках Москвы</span
+                  >
+                  и не только
+                </h2>
+                <div class="about__img">
+                  <picture><source srcset="img/about.webp" type="image/webp"><img src="img/about.png" alt="" /></picture>
+                </div>
+              </div>
+              <button class="btn gray-btn">Читать подробнее</button>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <h2 class="services__title">Наши услуги</h2>
+            <div class="services__inner">
+              <a href="#" class="services-card">
+                <div class="services-card__header">
+                  <h2>Наши услуги</h2>
+                </div>
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-2.webp" type="image/webp"><img src="img/services-2.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Консультативный <br />
+                  прием
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-2.webp" type="image/webp"><img src="img/services-2.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Препараты на <br />
+                  основе коллагена
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-3.webp" type="image/webp"><img src="img/services-3.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Биоревитализация, <br />
+                  мезотерапия
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-4.webp" type="image/webp"><img src="img/services-4.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">Контурная пластика</h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-5.webp" type="image/webp"><img src="img/services-5.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Тредлифтинг <br />
+                  спиральными мезонитями
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+            </div>
+            <div class="services__line">
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-6.webp" type="image/webp"><img src="img/services-6.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Тредлифтинг мезонитями <br />
+                  на канюлях
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-7.webp" type="image/webp"><img src="img/services-7.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">
+                  Армирование кожи тела <br />
+                  линейными мезонитями
+                </h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <a href="#" class="services-card">
+                <div class="services-card__img">
+                  <picture><source srcset="img/services-7.webp" type="image/webp"><img src="img/services-7.jpg" alt="" /></picture>
+                </div>
+                <h3 class="services-card__title">Пилинги</h3>
+                <div class="services-card__link">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.4248 16.6L12.8581 11.1667C13.4998 10.525 13.4998 9.47503 12.8581 8.83336L7.4248 3.40002"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="services-card__gradient"></div>
+              </a>
+              <div class="services-card__header services-card__footer">
+                <a href="#" class="btn main-btn">Смотреть все услуги</a>
+              </div>
+            </div>
+            <a href="#" class="btn main-btn services__link"
+              >Смотреть все услуги</a
+            >
+          </div>
+        </section>
+        <section class="reasons reasons-slider">
+          <div class="container">
+            <div class="reasons__inner">
+              <div class="reasons__header">
+                <h2>Почему Beauty Expert</h2>
+              </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="reasons-card">
+                        <div class="reasons-card__header">
+                          <div class="reasons-card__number reasons-card__number-current">
+                            01
+                          </div>
+                          <div class="reasons-card__number reasons-card__number-last">
+                            03
+                          </div>
+                        </div>
+                        <div class="reasons-card__text">
+                          <h3>Мы предлагаем пациентам</h3>
+                          <span>самые современные методики инъекционной и антивозрастной медицины</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reasons-card">
+                        <div class="reasons-card__header">
+                          <div class="reasons-card__number reasons-card__number-current">
+                            02
+                          </div>
+                          <div class="reasons-card__number reasons-card__number-last">
+                            03
+                          </div>
+                        </div>
+                        <div class="reasons-card__text">
+                          <h3>У нас работают</h3>
+                          <span>врачи международного уровня, авторы научных работ, эксперты-преподаватели курсов и семинаров для врачей-косметологов</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reasons-card">
+                        <div class="reasons-card__header">
+                          <div class="reasons-card__number reasons-card__number-current">
+                            03
+                          </div>
+                          <div class="reasons-card__number reasons-card__number-last">
+                            03
+                          </div>
+                        </div>
+                        <div class="reasons-card__text">
+                          <h3>Наши уютные кабинеты</h3>
+                          <span>оборудованы высокотехнологичным новым оборудованием</span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="reasons__bg">
+                <img src="img/reasons-ellipse.svg" alt="">
+              </div>
+              <button type="button" class="btn nav-btn nav-btn--prev">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5752 3.4001L7.14186 8.83343C6.5002 9.4751 6.5002 10.5251 7.14186 11.1668L12.5752 16.6001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="btn nav-btn nav-btn--next">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.4248 16.5999L12.8581 11.1666C13.4998 10.5249 13.4998 9.4749 12.8581 8.83324L7.4248 3.3999" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="bg-gray">
+          <section class="experts">
+            <div class="container">
+              <div class="experts__inner">
+                <div class="experts__header">
+                  <h2>Наши специалисты</h2>
+                  <button class="btn main-btn">Смотреть все</button>
+                </div>
+                <div class="experts__body">
+                  <a href="#" class="experts-card">
+                    <div class="experts-card__img">
+                      <img
+                        src="img/experts-1.png"
+                        alt="Старкова Елена Юрьевна"
+                      />
+                      <div class="experts-card-more">
+                        <button class="btn white-btn experts-card-more__btn">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="experts-card__text">
+                      <h3 class="experts-card__name">Старкова Елена Юрьевна</h3>
+                      <span class="experts-card__desc"
+                        >Пластический хирург</span
+                      >
+                    </div>
+                  </a>
+                  <a href="#" class="experts-card">
+                    <div class="experts-card__img">
+                      <img
+                        src="img/experts-3.png"
+                        alt="Евстратов Виктор Викторович"
+                      />
+                      <div class="experts-card-more">
+                        <button class="btn white-btn experts-card-more__btn">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="experts-card__text">
+                      <h3 class="experts-card__name">
+                        Евстратов Виктор Викторович
+                      </h3>
+                      <span class="experts-card__desc"
+                        >Дерматовенеролог, косметолог</span
+                      >
+                    </div>
+                  </a>
+                  <a href="#" class="experts-card">
+                    <div class="experts-card__img">
+                      <img
+                        src="img/experts-3.png"
+                        alt="Деткова (Попова) Дарья Александровна"
+                      />
+                      <div class="experts-card-more">
+                        <button class="btn white-btn experts-card-more__btn">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="experts-card__text">
+                      <h3 class="experts-card__name">
+                        Деткова (Попова) Дарья Александровна
+                      </h3>
+                      <span class="experts-card__desc"
+                        >Косметолог, дерматохирург</span
+                      >
+                    </div>
+                  </a>
+                  <a href="#" class="experts-card">
+                    <div class="experts-card__img">
+                      <img
+                        src="img/experts-1.png"
+                        alt="Старкова Елена Юрьевна"
+                      />
+                      <div class="experts-card-more">
+                        <button class="btn white-btn experts-card-more__btn">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="experts-card__text">
+                      <h3 class="experts-card__name">Старкова Елена Юрьевна</h3>
+                      <span class="experts-card__desc"
+                        >Пластический хирург</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <button class="btn main-btn experts__link">Смотреть все</button>
+              </div>
+            </div>
+          </section>
+          <section class="discount">
+            <div class="container">
+              <div class="discount__inner">
+                <div class="discount__body">
+                  <h3>
+                    <span>Хотите пройти</span> процедуры по <span>цене ниже,</span> чем у нас на сайте?
+                    Оставьте заявку, и <span>мы расскажем,</span> как это сделать
+                  </h3>
+                  <button class="btn white-btn mod-open-btn" data-modal="discount">Оставить заявку</button>
+                </div>
+                <div class="discount__link">
+                  <button class="btn main-btn mod-open-btn" data-modal="discount">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.67196 28.2827L7.54286 22.5409C8.33483 20.9405 8.33483 19.076 7.54286 17.4756L4.67196 11.7173C2.21354 6.80044 7.50986 1.60312 12.3772 4.17703L14.9181 5.52998C15.2811 5.71148 15.5616 6.00847 15.7101 6.37146L25.0983 27.2432C25.4777 28.1012 25.1313 29.1077 24.3063 29.5367L12.3607 35.8229C7.50986 38.3969 2.21354 33.1995 4.67196 28.2827Z" fill="currentColor"/>
+                      <path d="M27.1112 25.9399L20.9569 12.2784C20.264 10.7439 21.9139 9.19296 23.3988 9.98493L32.919 15.0008C36.9614 17.1292 36.9614 22.904 32.919 25.0324L29.5531 26.7979C28.6457 27.2598 27.5402 26.8804 27.1112 25.9399Z" fill="currentColor"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="discount__bg discount__bg-left">
+                  <img src="img/discount-1.svg" alt="">
+                </div>
+                <div class="discount__bg discount__bg-right">
+                  <img src="img/discount-2.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="news">
+          <div class="container">
+            <div class="news__inner basic-slider">
+              <div class="news__header">
+                <h2>Новости</h2>
+                <div class="nav-btns">
+                  <button type="button" class="btn nav-btn nav-btn--prev">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.5752 3.4001L7.14186 8.83343C6.5002 9.4751 6.5002 10.5251 7.14186 11.1668L12.5752 16.6001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="btn nav-btn nav-btn--next">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4248 16.5999L12.8581 11.1666C13.4998 10.5249 13.4998 9.4749 12.8581 8.83324L7.4248 3.3999" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+              </div>
+              </div>
+              <div class="news__body">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="#" class="news__item">
+                          <div class="news__img">
+                            <picture><source srcset="img/news-1.webp" type="image/webp"><img src="img/news-1.jpg" alt=""></picture>
+                          </div>
+                          <div class="news__text">
+                            <h3>Участие в практическом симпозиуме в г. Сеул</h3>
+                            <span>10.11.2017</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#" class="news__item">
+                          <div class="news__img">
+                            <picture><source srcset="img/news-2.webp" type="image/webp"><img src="img/news-2.jpg" alt=""></picture>
+                          </div>
+                          <div class="news__text">
+                            <h3>Новые услуги в клинике - аппарат М22</h3>
+                            <span>09.11.2017</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#" class="news__item">
+                          <div class="news__img">
+                            <picture><source srcset="img/news-3.webp" type="image/webp"><img src="img/news-3.jpg" alt=""></picture>
+                          </div>
+                          <div class="news__text">
+                            <h3>Комплимент на ЛИФТИНГ-ПРОГРАММУ на аппарате Hydrafacial (Хайдрафэшл) «4+1»</h3>
+                            <span>18.10.2017</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#" class="news__item">
+                          <div class="news__img">
+                            <picture><source srcset="img/news-1.webp" type="image/webp"><img src="img/news-1.jpg" alt=""></picture>
+                          </div>
+                          <div class="news__text">
+                            <h3>Участие в практическом симпозиуме в г. Сеул</h3>
+                            <span>10.11.2017</span>
+                          </div>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-text">
+          <div class="container">
+            <div class="home-text__inner">
+              <h3>Клиника эстетической медицины Beauty Expert Clinics</h3>
+              <p>Основным принципом нашей работы является персональный Beauty подход к каждому пациенту Клиники.Тесное взаимодействие с пациентами - основа и залог совместного успеха и лаконичного использования всех высокотехнологичных инструментов современной Бьюти индустрии. Строгое следование букве закона является прочным фундаментом взаимного доверия и уважения.</p>
+              <p>Специалисты нашей Клиники - это доктора и кандидаты медицинских наук, которые постоянно совершенствуют свои профессиональные навыки и знания, участвуя и организуя международные конференции по всему миру и занимаясь научно-практической деятельностью в России на базе клиник в Москве и Екатеринбурге. </p>
+              <p>Основным принципом нашей работы является персональный Beauty подход к каждому пациенту Клиники.Тесное взаимодействие с пациентами - основа и залог совместного успеха и лаконичного использования всех высокотехнологичных инструментов современной Бьюти индустрии. Строгое следование букве закона является прочным фундаментом взаимного доверия и уважения.</p>
+              <div class="home-text__bottom">
+                <div class="home-text__bg"></div>
+                <button type="button" class="btn nav-btn nav-btn--next">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.4001 7.42505L8.83343 12.8584C9.4751 13.5 10.5251 13.5 11.1668 12.8584L16.6001 7.42505" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__left">
@@ -474,8 +1317,7 @@
     </div>
   </div>
 </footer>
-
-        <!--overlay-->
+ <!--overlay-->
 <div class="overlay"></div>
 <!--select-overlay-->
 <div class="select-overlay"></div>
@@ -524,6 +1366,57 @@
             class="input-text"
             placeholder="Напишите на какую услугу хотите записаться или задайте вопрос"
           ></textarea>
+          <div class="subscribe-modal__footer">
+            <label class="item-checkbox">
+              <input type="checkbox" />
+              <span
+                >Подтверждаю, что ознакомлен(-а) с
+                <a href="#" target="_blank"
+                  >Политикой конфиденциальности</a
+                ></span
+              >
+            </label>
+            <button class="btn main-btn">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal subscribe-modal" id="discount">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <button
+        type="button"
+        class="btn-close modal__close"
+        aria-label="Закрыть всплывающее окно"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.94248 24.9428C8.42178 25.4635 7.57756 25.4635 7.05687 24.9428C6.53617 24.4221 6.53617 23.5779 7.05687 23.0572L14.1141 16L7.05687 8.94283C6.53617 8.42213 6.53617 7.57791 7.05687 7.05721C7.57756 6.53651 8.42178 6.53651 8.94248 7.05721L15.9997 14.1144L23.0569 7.05721C23.5776 6.53651 24.4218 6.53651 24.9425 7.05721C25.4632 7.57791 25.4632 8.42213 24.9425 8.94283L17.8853 16L24.9425 23.0572C25.4632 23.5779 25.4632 24.4221 24.9425 24.9428C24.4218 25.4635 23.5776 25.4635 23.0569 24.9428L15.9997 17.8856L8.94248 24.9428Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div class="modal__scroll">
+        <div class="modal__top">
+          <h3>Оставьте заявку, чтобы получить скидку</h3>
+        </div>
+        <div class="subscribe-modal__body">
+          <input type="text" class="input-text" placeholder="ФИО*" />
+          <input
+            type="tel"
+            class="input-text"
+            placeholder="Телефон*"
+            inputmode="text"
+          />
           <div class="subscribe-modal__footer">
             <label class="item-checkbox">
               <input type="checkbox" />
@@ -643,7 +1536,7 @@
 <script src="js/libs/fancybox.min.js"></script>
 <script src="js/libs/simplebar.js"></script>
 <script src="js/libs/accordion.min.js"></script>
+<script src="js/libs/circletype.min.js"></script>
 <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
