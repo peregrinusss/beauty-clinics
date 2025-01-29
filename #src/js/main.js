@@ -1,22 +1,29 @@
 //enable scroll
 function enableScroll() {
   if (document.querySelectorAll(".fixed-block")) {
-      document.querySelectorAll(".fixed-block").forEach(block => block.style.paddingRight = '0px')
+    document
+      .querySelectorAll(".fixed-block")
+      .forEach((block) => (block.style.paddingRight = "0px"));
   }
-  document.body.style.paddingRight = '0px'
-  document.body.classList.remove("no-scroll")
+  document.body.style.paddingRight = "0px";
+  document.body.classList.remove("no-scroll");
 }
 //disable scroll
 function disableScroll() {
-  let paddingValue = window.innerWidth > 350 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0
+  let paddingValue =
+    window.innerWidth > 350
+      ? window.innerWidth - document.documentElement.clientWidth + "px"
+      : 0;
   if (document.querySelectorAll(".fixed-block")) {
-      document.querySelectorAll(".fixed-block").forEach(block => block.style.paddingRight = paddingValue)
+    document
+      .querySelectorAll(".fixed-block")
+      .forEach((block) => (block.style.paddingRight = paddingValue));
   }
-  document.body.style.paddingRight = paddingValue
+  document.body.style.paddingRight = paddingValue;
   document.body.classList.add("no-scroll");
 }
 
-let animSpd = 400 //переменная для скорости анимации
+let animSpd = 400; //переменная для скорости анимации
 
 // бургер
 const burger = document.querySelector("#burger");
@@ -161,68 +168,71 @@ if (buttons.length) {
 }
 
 // модальное окно
-const modalOpenBtn = document.querySelectorAll(".mod-open-btn")
-const modalCloseBtn = document.querySelectorAll(".mod-close-btn")
-const modal = document.querySelectorAll(".modal")
+const modalOpenBtn = document.querySelectorAll(".mod-open-btn");
+const modalCloseBtn = document.querySelectorAll(".mod-close-btn");
+const modal = document.querySelectorAll(".modal");
 
 //open modal
 function openModal(modal) {
-  let activeModal = document.querySelector(".modal.open")
+  let activeModal = document.querySelector(".modal.open");
   if (!activeModal) {
-      disableScroll()
+    disableScroll();
   }
   if (activeModal) {
-    activeModal.classList.remove("open")
+    activeModal.classList.remove("open");
   }
-  modal.classList.add("open")
+  modal.classList.add("open");
 }
 //close modal
 function closeModal(modal) {
-  modal.classList.remove("open")
+  modal.classList.remove("open");
   setTimeout(() => {
-    enableScroll()
+    enableScroll();
   }, animSpd);
 }
 // modal click outside
-modal.forEach(mod => {
-  mod.addEventListener("click", e => {
-      if (!mod.querySelector(".modal__content").contains(e.target) || mod.querySelector(".btn-close").contains(e.target)){
-          closeModal(mod)
-      }
-  })
-})
+modal.forEach((mod) => {
+  mod.addEventListener("click", (e) => {
+    if (
+      !mod.querySelector(".modal__content").contains(e.target) ||
+      mod.querySelector(".btn-close").contains(e.target)
+    ) {
+      closeModal(mod);
+    }
+  });
+});
 // modal button on click
-modalOpenBtn.forEach(btn => {
-  btn.addEventListener("click", e => {
-      e.preventDefault()
-      let href = btn.getAttribute("data-modal")
-      openModal(document.getElementById(href))
-  })
-})
+modalOpenBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let href = btn.getAttribute("data-modal");
+    openModal(document.getElementById(href));
+  });
+});
 // modal close button on click
-modalCloseBtn.forEach(btn => {
-  btn.addEventListener("click", e => {
-      e.preventDefault()
-      let href = btn.getAttribute("data-modal")
-      closeModal(document.getElementById(href))
-  })
-})
+modalCloseBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let href = btn.getAttribute("data-modal");
+    closeModal(document.getElementById(href));
+  });
+});
 
 // mask input
-const inp = document.querySelectorAll('input[type=tel]')
+const inp = document.querySelectorAll("input[type=tel]");
 if (inp) {
-    inp.forEach(item => {
-        Inputmask({ "mask": "+7 999 999-99-99" }).mask(item);
-    })
+  inp.forEach((item) => {
+    Inputmask({ mask: "+7 999 999-99-99" }).mask(item);
+  });
 }
 
-const circleText = document.getElementById('circle-text');
+const circleText = document.getElementById("circle-text");
 if (circleText) {
   new CircleType(circleText);
 }
 
 // basic slider
-const basicSliderBlock = document.querySelector('.basic-slider')
+const basicSliderBlock = document.querySelector(".basic-slider");
 if (basicSliderBlock) {
   let basicSlider = new Swiper(basicSliderBlock.querySelector(".swiper"), {
     slidesPerView: 1.15,
@@ -244,16 +254,16 @@ if (basicSliderBlock) {
         spaceBetween: 20,
       },
     },
-    speed: 800
-  }) 
+    speed: 800,
+  });
 }
 
 // reasons slider
-const reasonsSliderBlock = document.querySelector('.reasons-slider')
+const reasonsSliderBlock = document.querySelector(".reasons-slider");
 if (reasonsSliderBlock) {
   let basicSlider = new Swiper(reasonsSliderBlock.querySelector(".swiper"), {
     slidesPerView: 1.1,
-    effect: 'coverflow',
+    effect: "coverflow",
     coverflowEffect: {
       rotate: 30,
       slideShadows: false,
@@ -270,15 +280,15 @@ if (reasonsSliderBlock) {
     },
     breakpoints: {
       575.98: {
-        slidesPerView: 1
-      }
+        slidesPerView: 1,
+      },
     },
-    speed: 800
-  }) 
+    speed: 800,
+  });
 }
 
-// basic slider
-const simpleSliderBlock = document.querySelector('.simple-slider')
+// simple slider
+const simpleSliderBlock = document.querySelector(".simple-slider");
 if (simpleSliderBlock) {
   let basicSlider = new Swiper(simpleSliderBlock.querySelector(".swiper"), {
     slidesPerView: 1.3,
@@ -303,52 +313,124 @@ if (simpleSliderBlock) {
       //   slidesPerView: 1
       // }
     },
-    speed: 800
-  }) 
+    speed: 800,
+  });
+}
+
+// basic slider 4
+const basicSlider4Block = document.querySelector(".basic-slider-4");
+if (basicSlider4Block) {
+  let basicSlider = new Swiper(basicSlider4Block.querySelector(".swiper"), {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: basicSlider4Block.querySelector(".nav-btn--prev"),
+      nextEl: basicSlider4Block.querySelector(".nav-btn--next"),
+    },
+    breakpoints: {
+      991.98: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      767.98: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      575.98: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      380: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
+    speed: 800,
+  });
 }
 
 //swhitch tab
-function tabSwitch(nav,block) {
-  nav.forEach((item,idx) => {
+function tabSwitch(nav, block) {
+  nav.forEach((item, idx) => {
     item.addEventListener("click", () => {
-      nav.forEach(el => {
-        el.classList.remove("active")
-      })
-      block.forEach(el => {
-        el.classList.remove("active")
-      })
-      item.classList.add("active")
-      block[idx].classList.add("active")
-      item.style.opacity = "0"
-        block[idx].style.opacity = "0"
+      nav.forEach((el) => {
+        el.classList.remove("active");
+      });
+      block.forEach((el) => {
+        el.classList.remove("active");
+      });
+      item.classList.add("active");
+      block[idx].classList.add("active");
+      item.style.opacity = "0";
+      block[idx].style.opacity = "0";
       setTimeout(() => {
-        item.style.opacity = "1"
-        block[idx].style.opacity = "1"
+        item.style.opacity = "1";
+        block[idx].style.opacity = "1";
       }, 0);
-    })
+    });
   });
 }
 
 //switch active tab/block
-const switchBlock = document.querySelectorAll(".switch-block")
+const switchBlock = document.querySelectorAll(".switch-block");
 if (switchBlock) {
-  switchBlock.forEach(item => {
-    tabSwitch(item.querySelectorAll("[data-nav]"),item.querySelectorAll("[data-block]"))
-  })
+  switchBlock.forEach((item) => {
+    tabSwitch(
+      item.querySelectorAll("[data-nav]"),
+      item.querySelectorAll("[data-block]")
+    );
+  });
 }
 
 // tabs scroll btn
-const tabsScroll = document.querySelectorAll(".tabs-scroll")
+const tabsScroll = document.querySelectorAll(".tabs-scroll");
 function viewScroll() {
-  tabsScroll.forEach((item => {
-    item.querySelector(".tabs").scrollWidth - item.querySelector(".tabs").clientWidth - item.querySelector(".tabs").scrollLeft > 5 ? item.classList.add("show-btn") : item.classList.remove("show-btn")
+  tabsScroll.forEach((item) => {
+    item.querySelector(".tabs").scrollWidth -
+      item.querySelector(".tabs").clientWidth -
+      item.querySelector(".tabs").scrollLeft >
+    5
+      ? item.classList.add("show-btn")
+      : item.classList.remove("show-btn");
     item.querySelector(".tabs").addEventListener("scroll", () => {
-      item.querySelector(".tabs").scrollWidth - item.querySelector(".tabs").clientWidth - item.querySelector(".tabs").scrollLeft > 5 ? item.classList.add("show-btn") : item.classList.remove("show-btn")
-    })
-  }
-  ));
+      item.querySelector(".tabs").scrollWidth -
+        item.querySelector(".tabs").clientWidth -
+        item.querySelector(".tabs").scrollLeft >
+      5
+        ? item.classList.add("show-btn")
+        : item.classList.remove("show-btn");
+    });
+  });
 }
 if (tabsScroll) {
-  viewScroll(),
-  window.addEventListener("resize", viewScroll)
+  viewScroll(), window.addEventListener("resize", viewScroll);
+}
+
+const rangeWrap = document.querySelector(".range-wrap");
+
+if (rangeWrap) {
+  rangeWrap.classList.remove("no-js");
+
+  const range = document.querySelector(".range");
+  const output = document.querySelector(".output");
+
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat("ru-RU").format(value) + " ₽";
+  };
+
+  const onRangeInput = () => {
+    const value = range.value;
+    output.textContent = formatCurrency(value);
+
+    const min = range.min;
+    const max = range.max;
+    const valuePercent = `${100 - ((max - value) / (max - min)) * 100}%`;
+    range.style.backgroundSize = `${valuePercent} 100%`;
+  };
+
+  onRangeInput();
+  range.addEventListener("input", onRangeInput);
 }

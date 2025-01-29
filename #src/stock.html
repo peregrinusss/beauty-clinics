@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html', { "title": "Контурная пластика губ со скидкой 15%" })
+
+  <body >
+    <div class="wrap">
+      <!--header-->
+      @@include('_header.html')
+      <!--main-->
+      <main class="main main-top">
+        <section class="stock">
+          <div class="container">
+            <a href="#" class="btn-back">
+              <div class="btn-back__icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.575 3.39997L7.14168 8.83331C6.50001 9.47498 6.50001 10.525 7.14168 11.1666L12.575 16.6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <span>Назад</span>
+            </a>
+            <div class="container-small">
+              <div class="stock__inner">
+                <div class="stock__img">
+                  <img src="img/stocks-2.jpg" alt="" />
+                </div>
+                <div class="stock__text">
+                  <div class="stocks-card__date stock__date">
+                    <span>До 26 декабря</span>
+                  </div>
+                  <h2>Контурная пластика губ со скидкой 15%</h2>
+                  <div class="text-block">
+                    <p>
+                      Режим дня городской работающей женщины напоминает гонки
+                      автомобиля. Однако самый крутые водители гоночных
+                      автомобилей находят несколько секунд на т.н. «пит-стоп» -
+                      короткий перерыв для технического осмотра, замены масла и
+                      т.п. Без таких коротких тайм-аутов ни одна машина не сможет
+                      доехать до финиша первой и завоевать победу.
+                    </p>
+                    <p>
+                      Режим дня городской работающей женщины напоминает гонки автомобиля. Однако самый крутые водители гоночных автомобилей находят несколько секунд на т.н. «пит-стоп» - короткий перерыв для технического осмотра, замены масла и т.п.
+                    </p>
+                  </div>
+                  <button class="btn main-btn">Записаться</button>
+                </div>
+              </div>
+            </div>
+
+            @@include('_services.html') @@include('_memoji.html', { "text": "Хотите записаться <br /> на прием?" })
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      @@include('_footer.html') @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+  </body>
+</html>

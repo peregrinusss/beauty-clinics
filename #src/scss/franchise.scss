@@ -1,0 +1,25 @@
+.franchise {
+
+  &__form {
+    box-shadow: 0px 0px 15px 2px #F5F5F5B2;
+    max-width: 502px;
+    margin: 0 auto;
+    border-radius: 52px;
+    padding: 32px;
+    margin-top: 50px;
+
+    @media (max-width: $bp4) {
+      padding: 24px;
+      border-radius: 42px;
+    }
+
+    @media (max-width: $bp5) {
+      margin: 0 -10px;
+      margin-top: 40px;
+    }
+  }
+
+  & .text-block {
+    margin-top: 20px;
+  }
+}

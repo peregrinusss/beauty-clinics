@@ -3,6 +3,11 @@
   &__more {
     width: fit-content;
     margin: 0 auto;
+
+    @media (max-width: $bp5) {
+      margin-top: 10px;
+      width: 100%;
+    }
   }
 
   & .experts-card {

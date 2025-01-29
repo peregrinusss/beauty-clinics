@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html', { "title": "Акции" })
+
+  <body >
+    <div class="wrap">
+      <!--header-->
+      @@include('_header.html')
+      <!--main-->
+      <main class="main main-top">
+        <section class="stocks">
+          <div class="container">
+            <div class="container-small">
+              <div class="stocks__inner news__inner">
+                <h2>Акции</h2>
+                <div class="stocks__body">
+                  @@include('_stocks-card.html', { "img": "img/stocks-1.jpg", "date": "До 11 января", "title": "Новогодние акции от клиники" })
+                  @@include('_stocks-card.html', { "img": "img/stocks-2.jpg", "date": "До 26 декабря", "title": "Контурная пластика губ со скидкой 15%" })
+                  @@include('_stocks-card.html', { "img": "img/stocks-2.jpg", "date": "До 26 декабря", "title": "Контурная пластика губ со скидкой 15%" })
+                  @@include('_stocks-card.html', { "img": "img/stocks-1.jpg", "date": "До 11 января", "title": "Новогодние акции от клиники" })
+                  @@include('_stocks-card.html', { "img": "img/stocks-1.jpg", "date": "До 11 января", "title": "Новогодние акции от клиники" })
+                  @@include('_stocks-card.html', { "img": "img/stocks-2.jpg", "date": "До 26 декабря", "title": "Контурная пластика губ со скидкой 15%" })
+                </div>
+                <button class="btn main-btn specialists__more">
+                  Показать еще
+                </button>
+              </div>
+            </div>
+
+            @@include('_services.html')
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      @@include('_footer.html') @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html', { "title": "Решение проблем" })
+
+  <body >
+    <div class="wrap">
+      <!--header-->
+      @@include('_header.html')
+      <!--main-->
+      <main class="main main-top">
+        <section class="problems">
+          <div class="container">
+            <div class="problems__inner news__inner">
+              <h2>Решение проблем</h2>
+              <div class="problems__body news-page__body">
+                @@include('_problems-card.html', { "name": "Сосудистые звездочки: <br> избавиться без боли и навсегда" })
+                @@include('_problems-card.html', { "name": "Удаление родинок: без боли <br> и неприятных последствий" })
+                @@include('_problems-card.html', { "name": "Удаление папиллом <br> в Москве" })
+                @@include('_problems-card.html', { "name": "Сосудистые звездочки: <br> избавиться без боли и навсегда" })
+                @@include('_problems-card.html', { "name": "Удаление родинок: без боли <br> и неприятных последствий" })
+                @@include('_problems-card.html', { "name": "Удаление папиллом <br> в Москве" })
+                @@include('_problems-card.html', { "name": "Сосудистые звездочки: <br> избавиться без боли и навсегда" })
+                @@include('_problems-card.html', { "name": "Удаление родинок: без боли <br> и неприятных последствий" })
+                @@include('_problems-card.html', { "name": "Удаление папиллом <br> в Москве" })
+              </div>
+              <button class="btn main-btn specialists__more">
+                Показать еще
+              </button>
+            </div>
+
+            @@include('_services.html')
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      @@include('_footer.html') @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+  </body>
+</html>

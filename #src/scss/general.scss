@@ -3,7 +3,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   &::-webkit-scrollbar-thumb {
-    background-color: $blue;
+    background: linear-gradient(180deg, #679DFF 0%, #FF8AE5 100%);
     border-radius: 8px;
     background-clip: padding-box;
   }
@@ -152,12 +152,6 @@ h6,
   }
   @media (max-width: $bp5) {
     max-width: 480px;
-  }
-
-  & .btn-back {
-    position: absolute;
-    left: 20px;
-    top: 0;
   }
 }
 .fixed-block {
@@ -1111,7 +1105,7 @@ h2 {
   }
 
   @media (max-width: $bp4) {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -1182,6 +1176,10 @@ p {
 
 .main-top {
   margin-top: 20px;
+
+  @media (max-width: $bp4) {
+    margin-top: 10px;
+  }
 }
 
 .tabs {
@@ -1266,11 +1264,21 @@ p {
   & h3 {
     margin-top: 40px;
     margin-bottom: 20px;
+
+    @media (max-width: $bp4) {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   & ol {
     padding-left: 40px;
     margin: 20px 0;
+
+    @media (max-width: $bp4) {
+      margin: 14px 0;
+      padding-left: 30px;
+    }
 
     & li {
       font-size: 18px;
@@ -1308,6 +1316,15 @@ p {
   margin: 0 auto;
   padding: 0 100px;
   box-sizing: content-box;
+
+  @media (max-width: $bp1) {
+    max-width: 790px;
+  }
+
+  @media (max-width: $bp2) {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 .btn-back {
@@ -1316,6 +1333,15 @@ p {
   align-items: center;
   gap: 10px;
   width: fit-content;
+  position: absolute;
+  left: 20px;
+  top: 0;
+
+  @media (max-width: $bp2) {
+    position: static;
+    margin-bottom: 10px;
+  }
+
 
   @media (min-width: $bp4) {
     &:hover {
@@ -1362,6 +1388,10 @@ p {
     font-weight: 500;
     color: #00000066;
     transition: all 0.3s;
+
+    @media (max-width: $bp4) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1376,6 +1406,10 @@ p {
     height: 100%;
     background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 14%);
     z-index: 10;
+
+    @media (max-width: $bp4) {
+      right: -10px;
+    }
   }
 
   & .nav-btn {
@@ -1409,6 +1443,23 @@ p {
   margin: 0 auto;
   margin-top: 180px;
 
+  @media (max-width: $bp1) {
+    height: 190px;
+  }
+
+  @media (max-width: $bp2) {
+    height: 150px;
+    margin-top: 140px;
+  }
+
+  @media (max-width: $bp4) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: $bp5) {
+    height: 130px;
+  }
+
   &__text {
     border-radius: 100px;
     background: $light-gray;
@@ -1418,14 +1469,36 @@ p {
     align-items: center;
     gap: 20px;
     height: 100%;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $bp2) {
+      padding: 24px 80px;
+    }
+
+    @media (max-width: $bp5) {
+      padding: 15px 10px;
+      gap: 10px;
+      width: 74vw;
+      min-width: 236px;
+    }
 
     & h2 {
       text-align: center;
+
+      @media (max-width: $bp5) {
+        font-size: 18px;
+      }
     }
 
     & .btn {
-      width: fit-content;
+      width: 100%;
+      max-width: 256px;
       margin: 0 auto;
+
+      @media (max-width: $bp5) {
+        max-width: 210px;
+      }
     }
   }
 
@@ -1436,6 +1509,14 @@ p {
     border-radius: 50%;
     background: $light-gray;
     margin-left: -8%;
+
+    @media (max-width: $bp2) {
+      margin-left: -10%;
+    }
+
+    @media (max-width: $bp5) {
+      margin-left: -13%;
+    }
   }
 
   &__icon {
@@ -1444,5 +1525,154 @@ p {
     position: absolute;
     right: -20%;
     top: -20%;
+    z-index: 10;
+
+    & img {
+      object-fit: contain;
+    }
+
+    @media (max-width: $bp2) {
+      width: 170px;
+      height: 190px;
+    }
+
+    @media (max-width: $bp5) {
+      width: 128px;
+      height: 137px;
+      right: -12%;
+      top: -14%;
+    }
+  }
+}
+
+.basic-slider-4 {
+  & .services-card {
+    aspect-ratio: 1.1/1 !important;
+  }
+}
+
+.form__item {
+  margin: 0;
+  margin-bottom: 0 !important;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & p {
+    text-align: left !important;
+    margin: 0 !important;
+  }
+}
+
+.form__group {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  @media (max-width: $bp7) {
+    gap: 40px;
+  }
+}
+
+.form_radio {
+  display: flex;
+  align-items: center;
+}
+.form_radio input[type=radio] {
+	display: none;
+}
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+	padding-left: 34px;
+	margin-right: 0;
+	user-select: none;
+}
+.form_radio label:before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 0;
+  top: 0;
+	bottom: 0;
+  margin: auto 0;
+  background: $light-gray;
+  border-radius: 50%;
+}
+
+.form_radio label:after {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 6px;
+  top: 0;
+	bottom: 0;
+  margin: auto 0;
+  background: linear-gradient(180deg, #679DFF 0%, #FF8AE5 100%);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+ 
+/* Checked */
+.form_radio input[type=radio]:checked + label:after {
+  opacity: 1;
+  visibility: visible;
+}
+ 
+.range {
+  width: 100%;
+  height: 8px;
+  margin: 0;
+  border-radius: 100px;
+  appearance: none;
+  background-color: $light-gray;
+  background-image: linear-gradient(89.86deg, #679DFF 0%, #FF8AE5 98.77%); /* Используем градиент, поскольку размер фона можно задать только через background-image */
+  background-repeat: no-repeat; /* Отключаем повторение фона */
+  background-size: 0 100%; /* Этот параметр будем менять позже */
+}
+
+.range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(50.91deg, #679DFF -3.45%, #FF8AE5 88.15%);
+  border-radius: 50%;
+  appearance: none;
+  cursor: grab;
+}
+
+.range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(50.91deg, #679DFF -3.45%, #FF8AE5 88.15%);
+  border-radius: 50%;
+  appearance: none;
+  border: 0;
+  cursor: grab;
+}
+
+.range-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+  & .output {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $black;
+    margin-bottom: 4px;
   }
 }

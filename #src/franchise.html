@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html', { "title": "Франшиза" })
+
+  <body >
+    <div class="wrap">
+      <!--header-->
+      @@include('_header.html')
+      <!--main-->
+      <main class="main main-top">
+        <section class="franchise">
+          <div class="container">
+            <a href="#" class="btn-back">
+              <div class="btn-back__icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.575 3.39997L7.14168 8.83331C6.50001 9.47498 6.50001 10.525 7.14168 11.1666L12.575 16.6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <span>Назад</span>
+            </a>
+            <div class="container-small">
+              <h2>Франшиза</h2>
+              <div class="text-block">
+                <p>
+                  Международная франшиза сети клиник «Бьюти Эксперт» - это
+                  уникальная возможность приобщиться к миру красоты и эстетики,
+                  открыть успешный бизнес, оказывать обществу
+                  высококвалифицированную медицинскую помощь и стать членом
+                  большой семьи бьюти-экспертов.
+                </p>
+                <p>
+                  У Вас уже есть клиника, и Вы хотите сделать ее более успешной,
+                  набрать в штат высококвалифицированных специалистов, составить
+                  комплекс безопасных и эффективных процедур? <br> Или Вы хотите
+                  открыть бизнес с нуля?
+                </p>
+              </div>
+              <form class="franchise__form">
+                <div class="modal__top">
+                  <h3>Заполните анкету</h3>
+                  <p>
+                    Мы вышлем Вам условия франшизы в кратчайшие сроки
+                  </p>
+                </div>
+                <div class="subscribe-modal__body">
+                  <input type="text" class="input-text" placeholder="ФИО*">
+                  <input type="tel" class="input-text" placeholder="Телефон*" inputmode="text">
+                  <input type="email" class="input-text" placeholder="Email*">
+                  <input type="text" class="input-text" placeholder="Город*">
+                  <div class="modal__top form__item">
+                    <p>
+                      Наличие опыта (клиника)*
+                    </p>
+                    <div class="form__group">
+                      <div class="form_radio">
+                        <input id="experience-1" type="radio" name="experience" checked>
+                        <label for="experience-1">Имеется</label>
+                      </div>
+                      <div class="form_radio">
+                        <input id="experience-2" type="radio" name="experience">
+                        <label for="experience-2">Не имеется</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal__top form__item">
+                    <p>
+                      Наличие в собственности помещения под клинику*
+                    </p>
+                    <div class="form__group">
+                      <div class="form_radio">
+                        <input id="place-1" type="radio" name="place" checked>
+                        <label for="place-1">Имеется</label>
+                      </div>
+                      <div class="form_radio">
+                        <input id="place-2" type="radio" name="place">
+                        <label for="place-2">Не имеется</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal__top form__item">
+                    <p>
+                      Какую сумму готовы инвестировать в открытие франшизы*
+                    </p>
+                    <div class="range-wrap no-js">
+                      <output name="value" class="output" for="range"></output>
+                      <input type="range" id="range" class="range" value="1500000" min="0" max="4000000" step="100000">
+                    </div>
+                  </div>
+                  <textarea class="input-text" placeholder="Напишите вопросы и предложения администрации “Бьюти Эксперт”"></textarea>
+                  <div class="subscribe-modal__footer">
+                    <label class="item-checkbox">
+                      <input type="checkbox">
+                      <span>Подтверждаю, что ознакомлен(-а) с
+                        <a href="#" target="_blank">Политикой конфиденциальности</a></span>
+                    </label>
+                    <button class="btn main-btn">Оставить заявку</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      @@include('_footer.html') @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+  </body>
+</html>
