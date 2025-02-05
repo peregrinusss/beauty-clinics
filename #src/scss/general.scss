@@ -1104,8 +1104,13 @@ h2 {
     font-size: 28px;
   }
 
-  @media (max-width: $bp4) {
+  
+  @media (max-width: $bp2) {
     font-size: 24px;
+  }
+
+  @media (max-width: $bp4) {
+    font-size: 20px;
   }
 }
 
@@ -1216,7 +1221,7 @@ p {
     white-space: nowrap;
 
     @media (max-width: $bp4) {
-      padding: 12px;
+      padding: 10px;
     }
 
     &:hover {
@@ -1268,6 +1273,16 @@ p {
     @media (max-width: $bp4) {
       margin-top: 20px;
       margin-bottom: 10px;
+    }
+  }
+
+  & h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+    @media (max-width: $bp1) {
+      font-size: 18px;
     }
   }
 
@@ -1674,5 +1689,45 @@ p {
     line-height: 18px;
     color: $black;
     margin-bottom: 4px;
+  }
+}
+
+.ac-arrow {
+  transition: all 0.6s;
+  flex-shrink: 0;
+}
+
+#search-empty {
+  display: none;
+  transition: all 0.3s;
+
+  &.visible {
+    display: block;
+  }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.ymaps3x0--map-copyrights {
+  display: none !important;
+}
+
+.map-marker {
+  width: 59px;
+  height: 69px;
+  position: relative;
+
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: -50%;
+    transform: translateX(50%);
   }
 }

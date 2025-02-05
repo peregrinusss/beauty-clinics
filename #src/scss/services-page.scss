@@ -1,0 +1,23 @@
+.services-page {
+  overflow-x: hidden;
+
+  & .news-page__inner {
+    margin: 0;
+  }
+
+  & .problems-card {
+    aspect-ratio: 1/0.9;
+  }
+
+  &__inner {
+    margin-top: 100px;
+
+    @media (max-width: $bp2) {
+      margin-top: 80px;
+    }
+
+    @media (max-width: $bp4) {
+      margin-top: 70px;
+    }
+  }
+}

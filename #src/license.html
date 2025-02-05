@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html', { "title": "Лицензии" })
+
+  <body >
+    <div class="wrap">
+      <!--header-->
+      @@include('_header.html')
+      <!--main-->
+      <main class="main main-top">
+        <section class="license">
+          <div class="container">
+            <a href="#" class="btn-back">
+              <div class="btn-back__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.575 3.39997L7.14168 8.83331C6.50001 9.47498 6.50001 10.525 7.14168 11.1666L12.575 16.6" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span>Назад</span>
+            </a>
+            <div class="container-small">
+              <div class="experts__inner">
+                <h2>Лицензии</h2>
+                <div class="license__body">
+                  @@include('_license-item.html', { "fancybox": "license-1" })
+                  @@include('_license-item.html', { "fancybox": "license-2" })
+                  @@include('_license-item.html', { "fancybox": "license-3" })
+                  @@include('_license-item.html', { "fancybox": "license-4" })
+                  @@include('_license-item.html', { "fancybox": "license-5" })
+                  @@include('_license-item.html', { "fancybox": "license-6" })
+                  @@include('_license-item.html', { "fancybox": "license-7" })
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      @@include('_footer.html') @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+  </body>
+</html>

@@ -131,7 +131,11 @@ if (menuTriggers.length) {
 }
 
 // аккордион
-new Accordion(".accordion-container");
+const menuAccordion = document.querySelector(".accordion-container");
+menuAccordion && new Accordion(menuAccordion);
+
+const serviceAccordion = document.querySelector(".service-accordion");
+serviceAccordion && new Accordion(".service-accordion");
 
 // тултип
 const buttons = document.querySelectorAll(".tooltip-btn");
@@ -433,4 +437,139 @@ if (rangeWrap) {
 
   onRangeInput();
   range.addEventListener("input", onRangeInput);
+}
+
+// input search
+const searchBlock = document.querySelector("#search-block");
+
+if (searchBlock) {
+  const searchInput = searchBlock.querySelector("#search-input");
+  const searchEmpty = searchBlock.querySelector("#search-empty");
+
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value.trim()) {
+      searchEmpty.classList.add("visible");
+    } else {
+      searchEmpty.classList.remove("visible");
+    }
+  });
+
+  searchEmpty.addEventListener("click", () => {
+    searchInput.value = "";
+    searchEmpty.classList.remove("visible");
+    searchInput.focus();
+  });
+}
+
+// initMap();
+
+// async function initMap() {
+//   // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+//   await ymaps3.ready;
+
+//   const { YMap, YMapDefaultSchemeLayer, YMapMarker } = ymaps3;
+
+//   // Иницилиазируем карту
+//   const map = new YMap(
+//     // Передаём ссылку на HTMLElement контейнера
+//     document.getElementById("map"),
+
+//     // Передаём параметры инициализации карты
+//     {
+//       location: {
+//         // Координаты центра карты
+//         // center: [37.588144, 55.733842],
+//         center: [37.69400999999998, 55.792316068951386],
+
+//         // Уровень масштабирования
+//         zoom: 15,
+//       },
+//     }
+//   );
+
+//   // Добавляем слой для отображения схематической карты
+//   map.addChild(new YMapDefaultSchemeLayer());
+
+//   // const markerElement = document.querySelector(".contacts__marker");
+
+//   const markerElement = document.createElement("div");
+//   markerElement.className = "marker-class";
+//   markerElement.innerText = "I'm marker!";
+
+//   const marker = new YMapMarker(
+//     {
+//       source: "markerSource",
+//       coordinates: [37.69400999999998, 55.792316068951386],
+//       draggable: true,
+//       mapFollowsOnDrag: true,
+//     },
+//     markerElement
+//   );
+
+//   map.addChild(marker);
+// }
+
+
+
+
+initMap();
+
+async function initMap() {
+  await ymaps3.ready;
+
+  const { YMap, YMapDefaultSchemeLayer, YMapMarker, YMapDefaultFeaturesLayer } =
+    ymaps3;
+
+  const map = new YMap(document.getElementById("map"), {
+    location: {
+      center: [37.69241140342709, 55.792086375807806],
+      zoom: 16,
+    },
+  });
+
+  map.addChild(new YMapDefaultSchemeLayer());
+  map.addChild(new YMapDefaultFeaturesLayer())
+
+  const markerElement = document.createElement("div");
+  markerElement.className = "map-marker";
+
+  const markerImage = document.createElement('img');
+  markerImage.src = 'img/marker.svg';
+  markerImage.classList.add('map-icon');
+
+  markerElement.appendChild(markerImage);
+
+  const marker = new YMapMarker(
+    {
+      coordinates: [37.6939241693115, 55.79234629163217],
+      draggable: true,
+      mapFollowsOnDrag: true,
+    },
+    markerElement
+  );
+
+  map.addChild(marker);
+}
+
+
+// scroll more
+const scrollBlock = document.getElementById("more-scroll");
+
+if (scrollBlock) {
+  const scrollBlockBody = document.getElementById("more-scroll-body");
+  const buttonWrapper = scrollBlock.querySelector(".home-text__bottom");
+  const button = buttonWrapper.querySelector(".nav-btn--next");
+
+  if (scrollBlockBody && button) {
+    button.addEventListener("click", function () {
+      scrollBlockBody.style.transition = "height 0.5s ease-in-out";
+      scrollBlockBody.style.height = scrollBlockBody.scrollHeight + "px";
+      button.classList.add("rotate");
+      buttonWrapper.style.display = "none";
+  
+      setTimeout(() => {
+        scrollBlockBody.style.height = "auto";
+      }, 500);
+    });
+  }
 }

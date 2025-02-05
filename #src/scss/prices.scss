@@ -1,0 +1,23 @@
+.prices {
+
+  & .service-table {
+    margin-top: 20px;
+
+    &__item {
+
+      &:nth-child(even) {
+        background: $white;
+      }
+    }
+  }
+
+  &__search {
+    max-width: 560px;
+
+    & .btn {
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.requisite {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__bg {
+    background: $light-gray;
+    border-radius: 32px;
+    padding: 32px;
+
+    @media (max-width: $bp4) {
+      padding: 24px;
+      border-radius: 28px;
+      margin: 0 -10px;
+    }
+
+    & h4 {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &-consumers {
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (max-width: $bp4) {
+        gap: 12px;
+      }
+
+      & span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        background: linear-gradient(90.92deg, #679dff 7.3%, #ff8ae5 85.09%);
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+
+        @media (max-width: $bp1) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

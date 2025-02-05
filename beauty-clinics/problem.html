@@ -12,9 +12,11 @@
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=d889cf05-49b0-4f2f-b7a7-17edfafbf91b&lang=ru_RU"></script>
     <link href="css/simplebar.min.css" type="text/css" rel="stylesheet"> 
     <link href="css/accordion.min.css" type="text/css" rel="stylesheet"> 
     <link href="css/swiper.min.css" type="text/css" rel="stylesheet"> 
+    <link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
     <title>Удаление родинок: без боли и неприятных последствий</title>
 </head>
@@ -600,7 +602,7 @@
 <div class="memoji">
   <div class="memoji__text">
     <h2>Хотите записаться <br /> на прием?</h2>
-    <button class="btn main-btn">Оставить заявку</button>
+    <button class="btn main-btn mod-open-btn" data-modal="request">Оставить заявку</button>
   </div>
   <div class="memoji__right">
     <div class="memoji__icon">
@@ -776,7 +778,7 @@
           />
         </svg>
       </button>
-      <div class="">
+      <div class="modal__scroll">
         <div class="modal__top">
           <h3>Записаться на прием</h3>
           <p>
@@ -1071,6 +1073,129 @@
               </div>
             </div>
           </div>
+          <!-- <div class="modal-left__result modal-left__result-empty">
+            <span>
+              По запросу <b>Ботулинотерапия</b> результатов не найдено
+            </span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal subscribe-modal" id="request">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <button
+        type="button"
+        class="btn-close modal__close"
+        aria-label="Закрыть всплывающее окно"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.94248 24.9428C8.42178 25.4635 7.57756 25.4635 7.05687 24.9428C6.53617 24.4221 6.53617 23.5779 7.05687 23.0572L14.1141 16L7.05687 8.94283C6.53617 8.42213 6.53617 7.57791 7.05687 7.05721C7.57756 6.53651 8.42178 6.53651 8.94248 7.05721L15.9997 14.1144L23.0569 7.05721C23.5776 6.53651 24.4218 6.53651 24.9425 7.05721C25.4632 7.57791 25.4632 8.42213 24.9425 8.94283L17.8853 16L24.9425 23.0572C25.4632 23.5779 25.4632 24.4221 24.9425 24.9428C24.4218 25.4635 23.5776 25.4635 23.0569 24.9428L15.9997 17.8856L8.94248 24.9428Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div class="modal__scroll">
+        <div class="modal__top">
+          <h3>Оставить заявку</h3>
+          <p>
+            Заполните форму, и наш менеджер свяжется с Вами в течение 15 минут
+          </p>
+        </div>
+        <div class="subscribe-modal__body">
+          <input type="text" class="input-text" placeholder="Имя*" />
+          <input
+            type="tel"
+            class="input-text"
+            placeholder="Телефон*"
+            inputmode="text"
+          />
+          <input type="email" class="input-text" placeholder="Email*" />
+          <textarea
+            class="input-text"
+            placeholder="Расскажите подробнее о Вашей проблеме"
+          ></textarea>
+          <div class="subscribe-modal__footer">
+            <label class="item-checkbox">
+              <input type="checkbox" />
+              <span
+                >Подтверждаю, что ознакомлен(-а) с
+                <a href="#" target="_blank"
+                  >Политикой конфиденциальности</a
+                ></span
+              >
+            </label>
+            <button class="btn main-btn">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal subscribe-modal" id="contact">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <button
+        type="button"
+        class="btn-close modal__close"
+        aria-label="Закрыть всплывающее окно"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.94248 24.9428C8.42178 25.4635 7.57756 25.4635 7.05687 24.9428C6.53617 24.4221 6.53617 23.5779 7.05687 23.0572L14.1141 16L7.05687 8.94283C6.53617 8.42213 6.53617 7.57791 7.05687 7.05721C7.57756 6.53651 8.42178 6.53651 8.94248 7.05721L15.9997 14.1144L23.0569 7.05721C23.5776 6.53651 24.4218 6.53651 24.9425 7.05721C25.4632 7.57791 25.4632 8.42213 24.9425 8.94283L17.8853 16L24.9425 23.0572C25.4632 23.5779 25.4632 24.4221 24.9425 24.9428C24.4218 25.4635 23.5776 25.4635 23.0569 24.9428L15.9997 17.8856L8.94248 24.9428Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div class="modal__scroll">
+        <div class="modal__top">
+          <h3>Отправить сообщение руководству</h3>
+          <p>
+            Заполните форму, и наш менеджер свяжется с Вами в течение 15 минут
+          </p>
+        </div>
+        <div class="subscribe-modal__body">
+          <input type="text" class="input-text" placeholder="Имя*" />
+          <input
+            type="tel"
+            class="input-text"
+            placeholder="Телефон*"
+            inputmode="text"
+          />
+          <input type="email" class="input-text" placeholder="Email*" />
+          <textarea
+            class="input-text"
+            placeholder="Напишите на какую услугу хотите записаться или задайте вопрос"
+          ></textarea>
+          <div class="subscribe-modal__footer">
+            <label class="item-checkbox">
+              <input type="checkbox" />
+              <span
+                >Подтверждаю, что ознакомлен(-а) с
+                <a href="#" target="_blank"
+                  >Политикой конфиденциальности</a
+                ></span
+              >
+            </label>
+            <button class="btn main-btn">Отправить</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1083,7 +1208,6 @@
 <script src="js/libs/inputmask.min.js"></script>
 <script src="js/libs/swiper.min.js"></script>
 <script src="js/libs/fancybox.min.js"></script>
-<!-- <script src="js/libs/simplebar.js"></script> -->
 <script src="js/libs/accordion.min.js"></script>
 <script src="js/libs/circletype.min.js"></script>
 <script src="js/main.js"></script>

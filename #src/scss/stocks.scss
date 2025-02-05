@@ -1,4 +1,6 @@
 .stocks {
+  overflow-x: hidden;
+
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
