@@ -461,57 +461,6 @@ if (searchBlock) {
   });
 }
 
-// initMap();
-
-// async function initMap() {
-//   // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-//   await ymaps3.ready;
-
-//   const { YMap, YMapDefaultSchemeLayer, YMapMarker } = ymaps3;
-
-//   // Иницилиазируем карту
-//   const map = new YMap(
-//     // Передаём ссылку на HTMLElement контейнера
-//     document.getElementById("map"),
-
-//     // Передаём параметры инициализации карты
-//     {
-//       location: {
-//         // Координаты центра карты
-//         // center: [37.588144, 55.733842],
-//         center: [37.69400999999998, 55.792316068951386],
-
-//         // Уровень масштабирования
-//         zoom: 15,
-//       },
-//     }
-//   );
-
-//   // Добавляем слой для отображения схематической карты
-//   map.addChild(new YMapDefaultSchemeLayer());
-
-//   // const markerElement = document.querySelector(".contacts__marker");
-
-//   const markerElement = document.createElement("div");
-//   markerElement.className = "marker-class";
-//   markerElement.innerText = "I'm marker!";
-
-//   const marker = new YMapMarker(
-//     {
-//       source: "markerSource",
-//       coordinates: [37.69400999999998, 55.792316068951386],
-//       draggable: true,
-//       mapFollowsOnDrag: true,
-//     },
-//     markerElement
-//   );
-
-//   map.addChild(marker);
-// }
-
-
-
-
 initMap();
 
 async function initMap() {
@@ -528,14 +477,14 @@ async function initMap() {
   });
 
   map.addChild(new YMapDefaultSchemeLayer());
-  map.addChild(new YMapDefaultFeaturesLayer())
+  map.addChild(new YMapDefaultFeaturesLayer());
 
   const markerElement = document.createElement("div");
   markerElement.className = "map-marker";
 
-  const markerImage = document.createElement('img');
-  markerImage.src = 'img/marker.svg';
-  markerImage.classList.add('map-icon');
+  const markerImage = document.createElement("img");
+  markerImage.src = "img/marker.svg";
+  markerImage.classList.add("map-icon");
 
   markerElement.appendChild(markerImage);
 
@@ -551,7 +500,6 @@ async function initMap() {
   map.addChild(marker);
 }
 
-
 // scroll more
 const scrollBlock = document.getElementById("more-scroll");
 
@@ -566,10 +514,38 @@ if (scrollBlock) {
       scrollBlockBody.style.height = scrollBlockBody.scrollHeight + "px";
       button.classList.add("rotate");
       buttonWrapper.style.display = "none";
-  
+
       setTimeout(() => {
         scrollBlockBody.style.height = "auto";
       }, 500);
     });
   }
 }
+
+// calendar
+// Массив дат-строк
+// Формат 'YYYY-MM-DD'
+const highlightDates = ["2025-02-01", "2025-02-15", "2025-02-10", "2025-02-04", "2025-02-18"];
+
+// Функция, превращающая объект Date в строку формата YYYY-MM-DD
+function dateToString(date) {
+  const year = date.getFullYear();
+  // Месяц и день приводим к двухзначному формату (01, 02, ... 12)
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+new AirDatepicker("#datepicker", {
+  onRenderCell({ date, cellType }) {
+    if (cellType === 'day') {
+      const dateStr = dateToString(date);
+      // Проверяем, есть ли такая строка в массиве
+      if (highlightDates.includes(dateStr)) {
+        return {
+          classes: 'not-available',
+        };
+      }
+    }
+  },
+});

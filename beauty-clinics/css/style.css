@@ -1072,6 +1072,12 @@ h6,
 .main-btn:disabled {
   background-color: rgba(0, 0, 0, 0.1019607843);
   color: rgba(0, 0, 0, 0.3019607843);
+  cursor: not-allowed;
+}
+
+.main-btn:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  color: rgba(0, 0, 0, 0.3019607843);
 }
 
 .gray-btn {
@@ -1688,6 +1694,9 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 20px;
   height: 100%;
   position: relative;
@@ -1931,6 +1940,104 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-transform: translateX(50%);
   -ms-transform: translateX(50%);
   transform: translateX(50%);
+}
+
+.datepicker {
+  position: relative;
+}
+
+.air-datepicker {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #F7F7F7;
+  border: none;
+  border-radius: 32px;
+  padding: 10px;
+  width: 100%;
+}
+
+.air-datepicker-cell.-current- {
+  color: #000000;
+  font-weight: 600;
+}
+
+.air-datepicker-body--day-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.air-datepicker-cell {
+  padding: 8px;
+  white-space: nowrap;
+  border-radius: 50%;
+  width: 32px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.air-datepicker-cell.-year- {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.air-datepicker-cell.-month- {
+  border-radius: 30px;
+  margin: 4px auto;
+}
+
+.air-datepicker-cell.-selected- {
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#94BAFF), to(#FFBFF1));
+  background: linear-gradient(180deg, #94BAFF 0%, #FFBFF1 100%);
+}
+
+.air-datepicker-cell.-selected-:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#94BAFF), to(#FFBFF1));
+  background: linear-gradient(180deg, #94BAFF 0%, #FFBFF1 100%);
+}
+
+.air-datepicker-cell.-selected-.-current- {
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#94BAFF), to(#FFBFF1));
+  background: linear-gradient(180deg, #94BAFF 0%, #FFBFF1 100%);
+}
+
+.air-datepicker-cell.-selected-.-current-:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#94BAFF), to(#FFBFF1));
+  background: linear-gradient(180deg, #94BAFF 0%, #FFBFF1 100%);
+}
+
+.air-datepicker-nav--title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.air-datepicker-nav--title i {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.air-datepicker-nav--action path {
+  stroke: #000000;
+  stroke: 1px;
+}
+
+.air-datepicker-nav--action {
+  border-radius: 50%;
+}
+
+.not-available {
+  color: rgba(0, 0, 0, 0.3019607843);
+  pointer-events: none;
+}
+
+.air-datepicker-nav {
+  border: none;
 }
 
 .header {
@@ -3358,6 +3465,7 @@ input[type=search]::-webkit-search-results-decoration {
 .intro-card p {
   font-size: 16px;
   font-weight: 500;
+  line-height: 100%;
   color: #000000;
   text-align: center;
   position: relative;
@@ -4196,6 +4304,116 @@ input[type=search]::-webkit-search-results-decoration {
 
 .specialists .experts-card__img {
   background: #F7F7F7;
+}
+
+.specialist {
+  overflow-x: hidden;
+}
+
+.specialist-inner__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.specialist-inner p {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.specialist-inner__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specialist-inner__item h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.specialist-inner__item-exp {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.specialist-inner__item-exp span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#679DFF), to(#FF8AE5));
+  background: linear-gradient(180deg, #679DFF 0%, #FF8AE5 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.specialist-inner__types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.specialist-inner__type {
+  background: #F7F7F7;
+  border-radius: 100px;
+  padding: 12px 16px;
+}
+
+.specialist .experts__inner {
+  margin-top: 100px;
+}
+
+.specialist__awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.specialist__awards .license-item {
+  max-width: 98px;
+}
+
+.specialist__awards .license-item__img {
+  padding: 2px;
+}
+
+.specialist__awards .license-item__img img {
+  border-radius: 10px;
+}
+
+.specialist__awards .license-item__inner {
+  border-radius: 12px;
+  -webkit-box-shadow: inset 0 0 0 4px #FFFFFF;
+  box-shadow: inset 0 0 0 4px #FFFFFF;
 }
 
 .news-page__body {
@@ -5114,6 +5332,277 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-text-fill-color: transparent !important;
 }
 
+.about-clinic {
+  overflow: visible;
+}
+
+.about-clinic__overflow {
+  overflow-x: hidden;
+}
+
+.about-clinic-inner {
+  position: relative;
+}
+
+.about-clinic-inner__img {
+  position: relative;
+  border-radius: 52px;
+  overflow: hidden;
+  aspect-ratio: 2.5/1;
+}
+
+.about-clinic-inner__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-clinic-inner .intro-reviews {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 15;
+}
+
+.about-clinic-inner .intro__impact {
+  z-index: 15;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.about-clinic-inner .intro__impact .intro-card__icon {
+  left: 35%;
+  top: 36%;
+}
+
+.about-clinic-inner .intro__impact .intro-card__body {
+  margin-top: 8px;
+}
+
+.about-clinic-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.about-clinic-info__link {
+  display: block;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  width: 237px;
+  height: 321px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+
+.about-clinic-info__link:hover {
+  opacity: 0.8;
+}
+
+.about-clinic-info__link .intro-link__icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.about-clinic-info__img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-clinic-info__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-clinic-info__text {
+  grid-row: span 2;
+}
+
+.about-clinic-info__text h3 {
+  margin-top: 0 !important;
+}
+
+.about-clinic-info__items {
+  margin-top: 40px;
+}
+
+.about-clinic-info__header {
+  border-top-right-radius: 36px;
+  border-top-left-radius: 36px;
+  background: #F7F7F7;
+  padding: 30px;
+}
+
+.about-clinic-info__header h3 {
+  margin: 0 !important;
+}
+
+.about-clinic-info__footer {
+  border-bottom-right-radius: 36px;
+  border-bottom-left-radius: 36px;
+  background: #F7F7F7;
+  height: 28px;
+}
+
+.about-clinic-info .service-accordion__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-clinic-info .service-accordion__header .reasons-card__header .reasons-card__number-current {
+  background: #F7F7F7;
+}
+
+.about-clinic-info .service-accordion__header .reasons-card__header .reasons-card__number-last {
+  background: #FBFBFB;
+}
+
+.about-clinic-info .service-accordion .ac {
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.about-clinic-info .service-accordion .ac:not(:first-child) {
+  border-top: 1px solid #F7F7F7;
+}
+
+.about-clinic-info .service-accordion .ac.is-active .reasons-card__number-current {
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#94BAFF), to(#FFBFF1));
+  background: linear-gradient(180deg, #94BAFF 0%, #FFBFF1 100%);
+}
+
+.about-clinic-info .service-accordion .ac.is-active .reasons-card__number-last {
+  color: rgba(0, 0, 0, 0.2);
+  background: #F7F7F7;
+}
+
+.about-clinic-info .service-accordion .ac .text-block {
+  margin-top: 20px;
+}
+
+.about-clinic-info .service-accordion .ac .text-block ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+}
+
+.about-clinic .discount {
+  margin-top: 140px;
+}
+
+.about-clinic .discount__link {
+  background: #FFFFFF;
+  bottom: auto;
+  top: 0;
+  border-radius: 0;
+  border-bottom-left-radius: 52px;
+}
+
+.about-clinic .discount__link::before {
+  background: #FFFFFF;
+  bottom: auto;
+  top: -1px;
+  rotate: -90deg;
+}
+
+.about-clinic .discount__link::after {
+  background: #FFFFFF;
+  top: auto;
+  bottom: -59px;
+  rotate: -90deg;
+}
+
+.about-clinic .discount__inner {
+  padding: 120px 80px 140px;
+}
+
+.about-clinic .discount__body {
+  gap: 10px;
+}
+
+.about-clinic .discount__body h3 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.about-clinic .discount__body > span {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.about-clinic .news__inner {
+  margin-top: 140px;
+}
+
+.about-clinic__cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 20px;
+}
+
+.about-clinic__cards .service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-clinic__cards .service-card-1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.about-clinic__cards .service-card-2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.about-clinic__cards .service-card-4 {
+  grid-row: span 2;
+}
+
+.about-clinic__cards .service-card-5 {
+  grid-row: 1;
+  grid-column: 2;
+  padding: 0;
+}
+
+.about-clinic__cards .service-card-5__img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-clinic__cards .service-card-5__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 @media (min-width: 767.98px) {
   .main-btn:hover {
     background-color: #3d3d3d;
@@ -5429,6 +5918,22 @@ input[type=search]::-webkit-search-results-decoration {
     right: -2%;
   }
 
+  .specialist-inner__info {
+    gap: 20px;
+  }
+
+  .specialist-inner__item h3 {
+    font-size: 18px;
+  }
+
+  .specialist-inner__item-exp span {
+    font-size: 18px;
+  }
+
+  .specialist .experts__inner {
+    margin-top: 80px;
+  }
+
   .news-page__inner {
     margin-top: 100px;
   }
@@ -5594,6 +6099,41 @@ input[type=search]::-webkit-search-results-decoration {
 
   .requisite-consumers__items span {
     font-size: 18px;
+  }
+
+  .about-clinic-inner .intro-reviews {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .about-clinic-info__link {
+    width: 182px;
+    height: 246px;
+  }
+
+  .about-clinic .discount {
+    margin-top: 120px;
+  }
+
+  .about-clinic .discount__inner {
+    padding: 90px 80px 120px;
+  }
+
+  .about-clinic .discount__body h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .about-clinic .discount__body > span {
+    font-size: 14px;
+  }
+
+  .about-clinic .news__inner {
+    margin-top: 120px;
+  }
+
+  .about-clinic__cards {
+    grid-template-rows: repeat(2, 160px);
   }
 }
 
@@ -6139,6 +6679,59 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 10px;
     padding: 0;
   }
+
+  .about-clinic-inner__img {
+    border-radius: 42px;
+    aspect-ratio: 2/1;
+  }
+
+  .about-clinic-inner .intro__impact {
+    position: absolute;
+    padding: 0 14px 14px 0;
+    border-bottom-right-radius: 36px;
+  }
+
+  .about-clinic-inner .intro__impact::after {
+    -webkit-clip-path: path("M 0 0 Q 0 40 40 40 L 0 40 Z");
+    clip-path: path("M 0 0 Q 0 40 40 40 L 0 40 Z");
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    bottom: auto;
+  }
+
+  .about-clinic-inner .intro__impact::before {
+    -webkit-clip-path: path("M 0 0 Q 0 40 40 40 L 0 40 Z");
+    clip-path: path("M 0 0 Q 0 40 40 40 L 0 40 Z");
+    left: 0;
+    bottom: -40px;
+    top: auto;
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-clinic-inner .intro__impact .intro-card {
+    display: block;
+  }
+
+  .about-clinic-info {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .about-clinic .discount__link {
+    border-bottom-left-radius: 36px;
+    padding: 0 0 12px 12px;
+  }
+
+  .about-clinic .discount__link::after {
+    bottom: -39px;
+  }
+
+  .about-clinic__cards {
+    gap: 10px;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -6317,6 +6910,10 @@ input[type=search]::-webkit-search-results-decoration {
 
   .memoji {
     margin-top: 80px;
+  }
+
+  .air-datepicker {
+    padding: 10px 0;
   }
 
   .header__logo {
@@ -6564,6 +7161,10 @@ input[type=search]::-webkit-search-results-decoration {
     border-radius: 28px;
   }
 
+  .specialist .experts__inner {
+    margin-top: 70px;
+  }
+
   .news-page__body {
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
@@ -6739,6 +7340,88 @@ input[type=search]::-webkit-search-results-decoration {
   .requisite-consumers__items {
     gap: 12px;
   }
+
+  .about-clinic-inner__img {
+    aspect-ratio: auto;
+    height: 80vw;
+  }
+
+  .about-clinic-inner .intro-reviews {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .about-clinic-info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-clinic-info__link {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1.3;
+  }
+
+  .about-clinic-info__link .intro-link__icon {
+    scale: 1.8;
+  }
+
+  .about-clinic-info__items {
+    margin: 30px -10px 0;
+  }
+
+  .about-clinic-info__header {
+    padding: 20px;
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+  }
+
+  .about-clinic-info__footer {
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+  }
+
+  .about-clinic-info .service-accordion .ac .text-block ol {
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .about-clinic .discount {
+    margin-top: 70px;
+  }
+
+  .about-clinic .discount__inner {
+    padding: 100px 20px 100px;
+  }
+
+  .about-clinic .discount__body h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .about-clinic .news__inner {
+    margin-top: 70px;
+  }
+
+  .about-clinic__cards {
+    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-clinic__cards .service-card-1 {
+    grid-column: span 2;
+    grid-row: span 1/2;
+  }
+
+  .about-clinic__cards .service-card-4 {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  .about-clinic__cards .service-card-5 {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -6826,6 +7509,11 @@ input[type=search]::-webkit-search-results-decoration {
   .franchise__form {
     margin: 0 -10px;
     margin-top: 40px;
+  }
+
+  .about-clinic-inner__img {
+    height: 170vw;
+    min-height: 600px;
   }
 }
 

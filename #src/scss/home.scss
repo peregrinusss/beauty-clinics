@@ -389,6 +389,7 @@
   & p {
     font-size: 16px;
     font-weight: 500;
+    line-height: 100%;
     color: $black;
     text-align: center;
     position: relative;
@@ -438,8 +439,6 @@
     @media (max-width: $bp1) {
       width: 36px;
       height: 36px;
-      // left: 10px;
-      // top: 10px;
     }
   }
 }
