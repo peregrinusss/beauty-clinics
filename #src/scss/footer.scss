@@ -145,7 +145,7 @@
     flex-direction: column;
     gap: 10px;
 
-    & span {
+    & span, a {
       font-size: 16px;
       font-weight: 500;
       line-height: 18px;
@@ -154,6 +154,12 @@
       @media (max-width: $bp2) {
         font-size: 14px;
       }
+    }
+
+    & a:hover {
+      background: $text-gradient !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
     }
   }
 

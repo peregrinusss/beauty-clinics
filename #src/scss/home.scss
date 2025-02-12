@@ -257,7 +257,13 @@
   padding: 2px;
   padding-right: 12px;
   position: relative;
+  z-index: 15;
   flex-shrink: 0;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   &__imgs {
     display: flex;
@@ -333,11 +339,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
-
-    &:hover {
-      opacity: 0.6;
-    }
   }
 }
 

@@ -267,6 +267,8 @@ const reasonsSliderBlock = document.querySelector(".reasons-slider");
 if (reasonsSliderBlock) {
   let basicSlider = new Swiper(reasonsSliderBlock.querySelector(".swiper"), {
     slidesPerView: 1.1,
+    centeredSlides: true, // центрируем активный слайд
+    // loop: true,          // делаем слайдер зацикленным
     effect: "coverflow",
     coverflowEffect: {
       rotate: 30,

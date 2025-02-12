@@ -35,16 +35,21 @@
         gap: 12px;
       }
 
-      & span {
+      & a {
         font-size: 20px;
         font-weight: 500;
         line-height: 22px;
         background: linear-gradient(90.92deg, #679dff 7.3%, #ff8ae5 85.09%);
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
+        transition: all 0.3s;
 
         @media (max-width: $bp1) {
           font-size: 18px;
+        }
+
+        &:hover {
+          opacity: 0.6;
         }
       }
     }

@@ -694,22 +694,12 @@
     </div>
     <div class="footer__bottom">
       <div class="footer__copyright">
-        <span>Политика конфиденциальности</span>
+        <a href="#">
+          Политика конфиденциальности
+        </a>
         <span>© 2025 Beauty Expert</span>
       </div>
       <div class="footer__omni">
-        <svg
-          viewBox="0 0 40 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M7.19922 0H10.7995V3.60024H7.19922V0ZM7.19922 6.80273V10.4004H3.60156V17.6009H7.19922V20.8014V24.4013H10.7995V20.8014H28.4023V24.4004H21.6019V28.0006H28.4023V24.4013H32.0026V17.6009H35.6002V10.4004H32.0026H32.0009V6.80273H28.4049V3.60156H24.8047V6.80273H14.3971V3.60156H10.7969V6.80273H7.19922ZM28.4023 13.998V10.403H24.7991V13.998H28.4023ZM14.3984 10.403V13.998H10.7995V10.403H14.3984ZM3.60024 13.998H0V24.3988H3.60024V13.998ZM17.6016 28.0006V24.4004H10.8011V28.0006H17.6016ZM32.0026 0H28.4023V3.60024H32.0026V0ZM39.2057 13.998H35.6055V24.3988H39.2057V13.998Z"
-            fill="currentColor"
-          />
-        </svg>
         <a href="https://omniagency.ru/">Сделано в OMNI</a>
       </div>
     </div>
@@ -1222,9 +1212,9 @@
       </button>
       <div class="modal__scroll">
         <div class="modal__top">
-          <h3>Отправить сообщение руководству</h3>
+          <h3>Записаться на прием</h3>
           <p>
-            Заполните форму, и наш менеджер свяжется с Вами в течение 15 минут
+            Расскажите специалисту о своей проблеме и выберите дату приема - наш менеджер свяжется с Вами для уточнения времени в течение 15 минут
           </p>
         </div>
         <div class="subscribe-modal__body">
@@ -1243,7 +1233,10 @@
           <label for="email">
             <input type="email" class="input-text" placeholder="Email*" id="email" />
           </label>
-          <div class="datepicker" id="datepicker"></div>
+          <div class="modal__item">
+            <span>Выберите дату</span>
+            <div class="datepicker" id="datepicker"></div>
+          </div>
           <label for="textarea">
             <textarea
             class="input-text"
