@@ -103,6 +103,13 @@
     @media (max-width: $bp4) {
       margin-top: 70px;
     }
+
+    &__body {
+
+      &-empty {
+        margin: 150px auto;
+      }
+    }
   }
 
   &-accordion {

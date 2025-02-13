@@ -86,10 +86,7 @@ if (menuTriggers.length) {
 
       // Уход с меню
       menu.addEventListener("mouseleave", (e) => {
-        // Если мышь ушла с меню и не на триггер, скрываем меню
-        if (!trigger.matches(":hover")) {
-          hideMenu();
-        }
+        hideMenu();
       });
     }
   });
@@ -132,10 +129,26 @@ if (menuTriggers.length) {
 
 // аккордион
 const menuAccordion = document.querySelector(".accordion-container");
-menuAccordion && new Accordion(menuAccordion);
+menuAccordion && new Accordion(menuAccordion, {
+  onOpen: function (currentElement) {
+    currentElement.scrollIntoView({
+      behavior: "smooth", // плавная прокрутка
+      block: "center",    // вертикально по центру экрана
+      inline: "nearest"
+    });
+  }
+});
 
 const serviceAccordion = document.querySelector(".service-accordion");
-serviceAccordion && new Accordion(".service-accordion");
+serviceAccordion && new Accordion(".service-accordion", {
+  onOpen: function (currentElement) {
+    currentElement.scrollIntoView({
+      behavior: "smooth", // плавная прокрутка
+      block: "center",    // вертикально по центру экрана
+      inline: "nearest"
+    });
+  }
+});
 
 // тултип
 const buttons = document.querySelectorAll(".tooltip-btn");
@@ -190,9 +203,14 @@ function openModal(modal) {
 //close modal
 function closeModal(modal) {
   modal.classList.remove("open");
-  setTimeout(() => {
-    enableScroll();
-  }, animSpd);
+
+  const burgerMenu = document.querySelector(".mobile-menu");
+
+  if (!burgerMenu.classList.contains("active")) {
+    setTimeout(() => {
+      enableScroll();
+    }, animSpd);
+  }
 }
 // modal click outside
 modal.forEach((mod) => {
@@ -493,7 +511,7 @@ async function initMap() {
   const marker = new YMapMarker(
     {
       coordinates: [37.6939241693115, 55.79234629163217],
-      draggable: true,
+      draggable: false,
       mapFollowsOnDrag: true,
     },
     markerElement
@@ -524,8 +542,11 @@ if (scrollBlock) {
   }
 }
 
+
+// ДЛЯ БЭКА
+
 // calendar
-// Массив дат-строк
+// В функцию календаря передается массив дат-строк занятых дат (они будут неактивны)
 // Формат 'YYYY-MM-DD'
 const highlightDates = ["2025-02-01", "2025-02-15", "2025-02-10", "2025-02-04", "2025-02-18"];
 
