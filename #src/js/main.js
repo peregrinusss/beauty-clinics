@@ -188,6 +188,46 @@ if (buttons.length) {
 const modalOpenBtn = document.querySelectorAll(".mod-open-btn");
 const modalCloseBtn = document.querySelectorAll(".mod-close-btn");
 const modal = document.querySelectorAll(".modal");
+const successModal = document.querySelector("#success-modal")
+const errorModal = document.querySelector("#error-modal")
+
+//open success modal
+function openSuccessModal(title, text, btnText, isReview = false) {
+  successModal.querySelector("h3").textContent = title ? title : "Заявка успешно отправлена"
+  successModal.querySelector("p").textContent = text ? text : ""
+  successModal.querySelector(".main-btn").textContent = btnText ? btnText : "Закрыть"
+
+  if (isReview) {
+    const icon = successModal.querySelector(".icon-success");
+    icon.classList.remove("icon-success");
+    icon.classList.add("icon-review")
+  }
+
+  let activeModal = document.querySelector(".modal.open");
+  if (!activeModal) {
+    disableScroll();
+  }
+  if (activeModal) {
+    activeModal.classList.remove("open");
+  }
+  successModal.classList.add("open");
+}
+
+//open error modal
+function openErrorModal(title, text, btnText) {
+  errorModal.querySelector("h3").textContent = title ? title : "Что-то пошло не так"
+  errorModal.querySelector("p").textContent = text ? text : ""
+  errorModal.querySelector(".main-btn").textContent = btnText ? btnText : "Закрыть"
+
+  let activeModal = document.querySelector(".modal.open");
+  if (!activeModal) {
+    disableScroll();
+  }
+  if (activeModal) {
+    activeModal.classList.remove("open");
+  }
+  errorModal.classList.add("open");
+}
 
 //open modal
 function openModal(modal) {
@@ -542,14 +582,7 @@ if (scrollBlock) {
   }
 }
 
-
-// ДЛЯ БЭКА
-
 // calendar
-// В функцию календаря передается массив дат-строк занятых дат (они будут неактивны)
-// Формат 'YYYY-MM-DD'
-const highlightDates = ["2025-02-01", "2025-02-15", "2025-02-10", "2025-02-04", "2025-02-18"];
-
 // Функция, превращающая объект Date в строку формата YYYY-MM-DD
 function dateToString(date) {
   const year = date.getFullYear();
@@ -559,16 +592,25 @@ function dateToString(date) {
   return `${year}-${month}-${day}`;
 }
 
-new AirDatepicker("#datepicker", {
-  onRenderCell({ date, cellType }) {
-    if (cellType === 'day') {
-      const dateStr = dateToString(date);
-      // Проверяем, есть ли такая строка в массиве
-      if (highlightDates.includes(dateStr)) {
-        return {
-          classes: 'not-available',
-        };
+/**
+ * initCalendar - инициализирует AirDatepicker на переданном селекторе,
+ * делая недоступными определенные даты.
+ *
+ * @param {string}   selector   Селектор поля ввода (например, '#datepicker')
+ * @param {string[]} busyDates  Массив строк дат в формате 'YYYY-MM-DD'
+ */
+function initCalendar(selector, busyDates = []) {
+  new AirDatepicker(selector, {
+    onRenderCell({ date, cellType }) {
+      if (cellType === 'day') {
+        const dateStr = dateToString(date);
+        // Если дата содержится в списке "занятых" дат - добавляем класс
+        if (busyDates.includes(dateStr)) {
+          return {
+            classes: 'not-available',
+          };
+        }
       }
-    }
-  },
-});
+    },
+  });
+}

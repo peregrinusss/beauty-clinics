@@ -1837,3 +1837,25 @@ input[type="search"]::-webkit-search-results-decoration {
 .air-datepicker-nav {
   border: none;
 }
+
+.error-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #F4371C;
+}
+
+.icon-success, .icon-error, .icon-review {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+}
+.icon-success {
+  background: url(../img/icons/success.svg) center / 50px 50px no-repeat;
+}
+.icon-error {
+  background: url(../img/icons/error.svg) center / 50px 50px no-repeat;
+}
+.icon-review {
+  background: url(../img/icons/review.svg) center / 50px 50px no-repeat;
+}

@@ -570,6 +570,7 @@
         <div class="subscribe-modal__body">
           <label for="subscribe-name">
             <input type="text" class="input-text" placeholder="Имя*" id="subscribe-name" />
+            <span class="error-text">Это поле обязательно к заполнению</span>
           </label>
           <label for="subscribe-phone">
             <input
@@ -1142,6 +1143,66 @@
     </div>
   </div>
 </div>
+
+<!--success-modal-->
+<div class="modal success-modal" id="success-modal">
+  <div class="modal__overlay">
+      <div class="modal__content">
+          <button type="button" class="btn-close modal__close" aria-label="Закрыть всплывающее окно">
+            <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.94248 24.9428C8.42178 25.4635 7.57756 25.4635 7.05687 24.9428C6.53617 24.4221 6.53617 23.5779 7.05687 23.0572L14.1141 16L7.05687 8.94283C6.53617 8.42213 6.53617 7.57791 7.05687 7.05721C7.57756 6.53651 8.42178 6.53651 8.94248 7.05721L15.9997 14.1144L23.0569 7.05721C23.5776 6.53651 24.4218 6.53651 24.9425 7.05721C25.4632 7.57791 25.4632 8.42213 24.9425 8.94283L17.8853 16L24.9425 23.0572C25.4632 23.5779 25.4632 24.4221 24.9425 24.9428C24.4218 25.4635 23.5776 25.4635 23.0569 24.9428L15.9997 17.8856L8.94248 24.9428Z"
+              fill="white"
+            />
+          </svg>
+          </button>
+          <div class="modal__scroll">
+              <div class="icon-success"></div>
+              <div class="modal__top">
+                <h3></h3>
+                <p></p>
+              </div>
+              <button class="btn main-btn mod-close-btn" data-modal="success-modal"></button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--error-modal-->
+<div class="modal error-modal" id="error-modal">
+  <div class="modal__overlay">
+      <div class="modal__content">
+          <button type="button" class="btn-close modal__close" aria-label="Закрыть всплывающее окно">
+            <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.94248 24.9428C8.42178 25.4635 7.57756 25.4635 7.05687 24.9428C6.53617 24.4221 6.53617 23.5779 7.05687 23.0572L14.1141 16L7.05687 8.94283C6.53617 8.42213 6.53617 7.57791 7.05687 7.05721C7.57756 6.53651 8.42178 6.53651 8.94248 7.05721L15.9997 14.1144L23.0569 7.05721C23.5776 6.53651 24.4218 6.53651 24.9425 7.05721C25.4632 7.57791 25.4632 8.42213 24.9425 8.94283L17.8853 16L24.9425 23.0572C25.4632 23.5779 25.4632 24.4221 24.9425 24.9428C24.4218 25.4635 23.5776 25.4635 23.0569 24.9428L15.9997 17.8856L8.94248 24.9428Z"
+              fill="white"
+            />
+          </svg>
+          </button>
+          <div class="modal__scroll">
+              <div class="icon-error"></div>
+              <div class="modal__top">
+                <h3></h3>
+                <p></p>
+              </div>
+              <button class="btn main-btn mod-close-btn" data-modal="error-modal">Закрыть</button>
+          </div>
+      </div>
+  </div>
+</div>
     </div>
     <script src="js/libs/jquery.min.js"></script>
 <script src="js/libs/nouislider.min.js"></script>
@@ -1152,5 +1213,6 @@
 <script src="js/libs/circletype.min.js"></script>
 <script src="js/libs/air-datepicker.js"></script>
 <script src="js/main.js"></script>
+<script src="js/custom.js"></script>
   </body>
 </html>

@@ -2044,6 +2044,35 @@ input[type=search]::-webkit-search-results-decoration {
   border: none;
 }
 
+.error-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #F4371C;
+}
+
+.icon-success,
+.icon-error,
+.icon-review {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+}
+
+.icon-success {
+  background: url(../img/icons/success.svg) center/50px 50px no-repeat;
+}
+
+.icon-error {
+  background: url(../img/icons/error.svg) center/50px 50px no-repeat;
+}
+
+.icon-review {
+  background: url(../img/icons/review.svg) center/50px 50px no-repeat;
+}
+
 .header {
   background-color: #FFFFFF;
   border-bottom-right-radius: 52px;
@@ -2600,7 +2629,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 32px;
   font-weight: 500;
   text-align: center;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .modal__item {
@@ -2988,6 +3017,18 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.del-modal .btn,
+.error-modal .btn,
+.success-modal .btn {
+  max-width: 100%;
+}
+
+.del-modal h3,
+.error-modal h3,
+.success-modal h3 {
+  margin-bottom: 10px !important;
 }
 
 .footer {
@@ -7087,6 +7128,12 @@ input[type=search]::-webkit-search-results-decoration {
 
   .modal-left-article h3 {
     font-size: 16px !important;
+  }
+
+  .del-modal h3,
+  .error-modal h3,
+  .success-modal h3 {
+    margin: 0 !important;
   }
 
   .footer {
