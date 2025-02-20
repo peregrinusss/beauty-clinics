@@ -12,13 +12,17 @@
       & .services-card {
 
         &__gradient {
-          opacity: 1;
-          visibility: visible;
+          // opacity: 1;
+          // visibility: visible;
+          opacity: 0;
+          visibility: hidden;
         }
 
         &__img {
-          opacity: 1;
-          visibility: visible;
+          // opacity: 1;
+          // visibility: visible;
+          opacity: 0;
+          visibility: hidden;
 
           & img {
             transform: scale(1);
@@ -26,7 +30,8 @@
         }
 
         &__title {
-          color: $white;
+          // color: $white;
+          color: $black;
         }
 
         &__link {
@@ -37,15 +42,6 @@
           & svg {
             color: $black;
           }
-
-          // & .services-card__link {
-          //   backdrop-filter: blur(6px);
-          //   background: #ffffff33;
-    
-          //   & svg {
-          //     color: $white;
-          //   }
-          // }
         }
       }
     }
@@ -53,19 +49,24 @@
     & .services-card {
 
       &__gradient {
-        opacity: 0;
-        visibility: hidden;
+        // opacity: 0;
+        // visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: all 0.3s;
       }
 
       &__img {
-        opacity: 0;
-        visibility: hidden;
+        // opacity: 0;
+        // visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: all 0.3s;
       }
 
       &__title {
-        color: $black;
+        // color: $black;
+        color: $white;
         transition: all 0.3s;
       }
     }

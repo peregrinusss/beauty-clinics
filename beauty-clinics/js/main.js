@@ -294,30 +294,32 @@ if (circleText) {
 }
 
 // basic slider
-const basicSliderBlock = document.querySelector(".basic-slider");
-if (basicSliderBlock) {
-  let basicSlider = new Swiper(basicSliderBlock.querySelector(".swiper"), {
-    slidesPerView: 1.15,
-    spaceBetween: 10,
-    observer: true,
-    observeParents: true,
-    watchSlidesProgress: true,
-    navigation: {
-      prevEl: basicSliderBlock.querySelector(".nav-btn--prev"),
-      nextEl: basicSliderBlock.querySelector(".nav-btn--next"),
-    },
-    breakpoints: {
-      991.98: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+const basicSliderBlocks = document.querySelectorAll(".basic-slider");
+if (basicSliderBlocks.length > 0) {
+  basicSliderBlocks.forEach((basicSliderBlock) => {
+    let basicSlider = new Swiper(basicSliderBlock.querySelector(".swiper"), {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+      observer: true,
+      observeParents: true,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: basicSliderBlock.querySelector(".nav-btn--prev"),
+        nextEl: basicSliderBlock.querySelector(".nav-btn--next"),
       },
-      767.98: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      breakpoints: {
+        991.98: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        767.98: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
       },
-    },
-    speed: 800,
-  });
+      speed: 800,
+    });
+  })
 }
 
 // reasons slider

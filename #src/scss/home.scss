@@ -464,13 +464,16 @@
     position: absolute;
     width: 178px;
     height: 178px;
-    top: 0;
+    top: 10%;
     bottom: 0;
-    right: -10%;
+    right: -15%;
     margin: auto 0;
 
     @media (max-width: $bp2) {
       top: 80%;
+      right: -16%;
+      width: 140px;
+      height: 140px;
     }
 
     @media (max-width: $bp4) {

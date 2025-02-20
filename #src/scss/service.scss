@@ -224,5 +224,12 @@
         }
       }
     }
+
+    &__btn {
+      margin-top: 10px;
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+    }
   }
 }

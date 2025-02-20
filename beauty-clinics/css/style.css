@@ -3596,9 +3596,9 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   width: 178px;
   height: 178px;
-  top: 0;
+  top: 10%;
   bottom: 0;
-  right: -10%;
+  right: -15%;
   margin: auto 0;
 }
 
@@ -4549,13 +4549,13 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .problems-card:hover .services-card__gradient {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .problems-card:hover .services-card__img {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .problems-card:hover .services-card__img img {
@@ -4565,7 +4565,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .problems-card:hover .services-card__title {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .problems-card:hover .services-card__link {
@@ -4580,21 +4580,21 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .problems-card .services-card__gradient {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .problems-card .services-card__img {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .problems-card .services-card__title {
-  color: #000000;
+  color: #FFFFFF;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -4922,6 +4922,15 @@ input[type=search]::-webkit-search-results-decoration {
 
 .service-table__item span:last-child {
   white-space: nowrap;
+}
+
+.service-table__btn {
+  margin-top: 10px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
 }
 
 .prices .service-table {
@@ -6407,6 +6416,9 @@ input[type=search]::-webkit-search-results-decoration {
 
   .about__img {
     top: 80%;
+    right: -16%;
+    width: 140px;
+    height: 140px;
   }
 
   .about__body h2 {
