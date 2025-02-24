@@ -4,71 +4,71 @@
   &-card {
     display: block;
     aspect-ratio: 2/1.1;
-    background-color: $light-gray;
+    // background-color: $light-gray;
     grid-row: span 1 !important;
     grid-column: span 1 !important;
 
-    &:hover {
-      & .services-card {
+    // &:hover {
+    //   & .services-card {
 
-        &__gradient {
-          // opacity: 1;
-          // visibility: visible;
-          opacity: 0;
-          visibility: hidden;
-        }
+    //     &__gradient {
+    //       // opacity: 1;
+    //       // visibility: visible;
+    //       opacity: 0;
+    //       visibility: hidden;
+    //     }
 
-        &__img {
-          // opacity: 1;
-          // visibility: visible;
-          opacity: 0;
-          visibility: hidden;
+    //     &__img {
+    //       // opacity: 1;
+    //       // visibility: visible;
+    //       opacity: 0;
+    //       visibility: hidden;
 
-          & img {
-            transform: scale(1);
-          }
-        }
+    //       & img {
+    //         transform: scale(1);
+    //       }
+    //     }
 
-        &__title {
-          // color: $white;
-          color: $black;
-        }
+    //     &__title {
+    //       // color: $white;
+    //       color: $black;
+    //     }
 
-        &__link {
-          background: $white !important;
-          color: $black;
-          backdrop-filter: blur(0);
+    //     &__link {
+    //       background: $white !important;
+    //       color: $black;
+    //       backdrop-filter: blur(0);
 
-          & svg {
-            color: $black;
-          }
-        }
-      }
-    }
+    //       & svg {
+    //         color: $black;
+    //       }
+    //     }
+    //   }
+    // }
 
-    & .services-card {
+    // & .services-card {
 
-      &__gradient {
-        // opacity: 0;
-        // visibility: hidden;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s;
-      }
+    //   &__gradient {
+    //     // opacity: 0;
+    //     // visibility: hidden;
+    //     opacity: 1;
+    //     visibility: visible;
+    //     transition: all 0.3s;
+    //   }
 
-      &__img {
-        // opacity: 0;
-        // visibility: hidden;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s;
-      }
+    //   &__img {
+    //     // opacity: 0;
+    //     // visibility: hidden;
+    //     opacity: 1;
+    //     visibility: visible;
+    //     transition: all 0.3s;
+    //   }
 
-      &__title {
-        // color: $black;
-        color: $white;
-        transition: all 0.3s;
-      }
-    }
+    //   &__title {
+    //     // color: $black;
+    //     color: $white;
+    //     transition: all 0.3s;
+    //   }
+    // }
   }
 }

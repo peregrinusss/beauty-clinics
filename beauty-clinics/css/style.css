@@ -4543,60 +4543,8 @@ input[type=search]::-webkit-search-results-decoration {
 .problems-card {
   display: block;
   aspect-ratio: 2/1.1;
-  background-color: #F7F7F7;
   grid-row: span 1 !important;
   grid-column: span 1 !important;
-}
-
-.problems-card:hover .services-card__gradient {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.problems-card:hover .services-card__img {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.problems-card:hover .services-card__img img {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.problems-card:hover .services-card__title {
-  color: #000000;
-}
-
-.problems-card:hover .services-card__link {
-  background: #FFFFFF !important;
-  color: #000000;
-  -webkit-backdrop-filter: blur(0);
-  backdrop-filter: blur(0);
-}
-
-.problems-card:hover .services-card__link svg {
-  color: #000000;
-}
-
-.problems-card .services-card__gradient {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.problems-card .services-card__img {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.problems-card .services-card__title {
-  color: #FFFFFF;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .stocks {
