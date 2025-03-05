@@ -127,28 +127,35 @@ if (menuTriggers.length) {
   });
 }
 
-// аккордион
-const menuAccordion = document.querySelector(".accordion-container");
-menuAccordion && new Accordion(menuAccordion, {
-  onOpen: function (currentElement) {
-    currentElement.scrollIntoView({
-      behavior: "smooth", // плавная прокрутка
-      block: "center",    // вертикально по центру экрана
-      inline: "nearest"
+function initAcc() {
+  // Аккордеон сервиса
+  const serviceAccordion = document.querySelector(".service-accordion");
+  if (serviceAccordion) {
+    new Accordion(serviceAccordion, {
+      onOpen: function (currentElement) {
+        currentElement.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest",
+        });
+      },
     });
   }
-});
+}
 
-const serviceAccordion = document.querySelector(".service-accordion");
-serviceAccordion && new Accordion(".service-accordion", {
-  onOpen: function (currentElement) {
-    currentElement.scrollIntoView({
-      behavior: "smooth", // плавная прокрутка
-      block: "center",    // вертикально по центру экрана
-      inline: "nearest"
-    });
-  }
-});
+// Аккордеон меню
+const menuAccordion = document.querySelector(".accordion-container");
+if (menuAccordion) {
+  new Accordion(menuAccordion, {
+    onOpen: function (currentElement) {
+      currentElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    },
+  });
+}
 
 // тултип
 const buttons = document.querySelectorAll(".tooltip-btn");
@@ -188,19 +195,23 @@ if (buttons.length) {
 const modalOpenBtn = document.querySelectorAll(".mod-open-btn");
 const modalCloseBtn = document.querySelectorAll(".mod-close-btn");
 const modal = document.querySelectorAll(".modal");
-const successModal = document.querySelector("#success-modal")
-const errorModal = document.querySelector("#error-modal")
+const successModal = document.querySelector("#success-modal");
+const errorModal = document.querySelector("#error-modal");
 
 //open success modal
 function openSuccessModal(title, text, btnText, isReview = false) {
-  successModal.querySelector("h3").textContent = title ? title : "Заявка успешно отправлена"
-  successModal.querySelector("p").textContent = text ? text : ""
-  successModal.querySelector(".main-btn").textContent = btnText ? btnText : "Закрыть"
+  successModal.querySelector("h3").textContent = title
+    ? title
+    : "Заявка успешно отправлена";
+  successModal.querySelector("p").textContent = text ? text : "";
+  successModal.querySelector(".main-btn").textContent = btnText
+    ? btnText
+    : "Закрыть";
 
   if (isReview) {
     const icon = successModal.querySelector(".icon-success");
     icon.classList.remove("icon-success");
-    icon.classList.add("icon-review")
+    icon.classList.add("icon-review");
   }
 
   let activeModal = document.querySelector(".modal.open");
@@ -215,9 +226,13 @@ function openSuccessModal(title, text, btnText, isReview = false) {
 
 //open error modal
 function openErrorModal(title, text, btnText) {
-  errorModal.querySelector("h3").textContent = title ? title : "Что-то пошло не так"
-  errorModal.querySelector("p").textContent = text ? text : ""
-  errorModal.querySelector(".main-btn").textContent = btnText ? btnText : "Закрыть"
+  errorModal.querySelector("h3").textContent = title
+    ? title
+    : "Что-то пошло не так";
+  errorModal.querySelector("p").textContent = text ? text : "";
+  errorModal.querySelector(".main-btn").textContent = btnText
+    ? btnText
+    : "Закрыть";
 
   let activeModal = document.querySelector(".modal.open");
   if (!activeModal) {
@@ -319,7 +334,7 @@ if (basicSliderBlocks.length > 0) {
       },
       speed: 800,
     });
-  })
+  });
 }
 
 // reasons slider
@@ -604,15 +619,23 @@ function dateToString(date) {
 function initCalendar(selector, busyDates = []) {
   new AirDatepicker(selector, {
     onRenderCell({ date, cellType }) {
-      if (cellType === 'day') {
+      if (cellType === "day") {
         const dateStr = dateToString(date);
         // Если дата содержится в списке "занятых" дат - добавляем класс
         if (busyDates.includes(dateStr)) {
           return {
-            classes: 'not-available',
+            classes: "not-available",
           };
         }
       }
+    },
+
+    onSelect({ date }) {
+      // Собираем нужный формат даты (например, YYYY-MM-DD)
+      const dateStr = date ? dateToString(date) : "";
+
+      // Записываем выбранную дату в data-value на самом div #datepicker
+      document.querySelector(selector).dataset.value = dateStr;
     },
   });
 }

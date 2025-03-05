@@ -1477,7 +1477,8 @@ p {
   flex-wrap: wrap;
 }
 
-.tabs div {
+.tabs div,
+.tabs a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1496,11 +1497,13 @@ p {
   white-space: nowrap;
 }
 
-.tabs div:hover {
+.tabs div:hover,
+.tabs a:hover {
   opacity: 0.6;
 }
 
-.tabs div span {
+.tabs div span,
+.tabs a span {
   position: relative;
   top: -5px;
   left: -3px;
@@ -1508,20 +1511,23 @@ p {
   font-style: italic;
 }
 
-.tabs div svg {
+.tabs div svg,
+.tabs a svg {
   fill: #1573FF;
   width: 20px;
   height: 20px;
 }
 
-.tabs div.active {
+.tabs div.active,
+.tabs a.active {
   color: #FFFFFF;
   background: #0D0C1A;
   pointer-events: none;
   border-color: #0D0C1A;
 }
 
-.tabs div.active svg {
+.tabs div.active svg,
+.tabs a.active svg {
   fill: #FFFFFF;
 }
 
@@ -2859,6 +2865,7 @@ input[type=search]::-webkit-search-results-decoration {
   overflow-y: auto;
   padding-right: 10px;
   margin-right: -10px;
+  scroll-behavior: smooth;
 }
 
 .modal-left__scroll::-webkit-scrollbar-thumb {
@@ -6928,7 +6935,8 @@ input[type=search]::-webkit-search-results-decoration {
     /* Safari and Chrome browsers */
   }
 
-  .tabs div {
+  .tabs div,
+  .tabs a {
     padding: 10px;
   }
 

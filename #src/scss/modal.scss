@@ -490,6 +490,7 @@
     overflow-y: auto;
     padding-right: 10px;
     margin-right: -10px;
+    scroll-behavior: smooth;
 
     @media (max-width: $bp1) {
       height: calc(100% - 80px);
